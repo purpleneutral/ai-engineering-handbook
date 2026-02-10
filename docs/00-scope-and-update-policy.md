@@ -12,6 +12,7 @@ These notes aim to be a durable reference for building reliable AI features, not
 - Agent loops, tool design, and safety boundaries
 - Evaluation strategies and regression testing
 - Production concerns: latency, cost, observability, and incident response
+- A curated tooling index with install pointers (see `README.md` and `docs/15-installation-and-local-setup.md`)
 
 ## What This Repo Does Not Try To Do
 - Maintain a constantly-updated "best model/provider" leaderboard
