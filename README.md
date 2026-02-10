@@ -21,6 +21,7 @@ A curated, GitHub-first reference for modern AI/LLM engineering: practical conce
 - Evals: `docs/05-evals.md`
 - Safety/privacy/security: `docs/06-safety-privacy-security.md`
 - Architecture recipes: `docs/07-architecture-recipes.md`
+- Stacks and difficulty: `docs/16-stacks-and-difficulty.md`
 - Ops: `docs/08-ops.md`
 - Structured outputs + tool calling: `docs/11-structured-outputs-and-tool-calling.md`
 - Embeddings + vector search: `docs/12-embeddings-and-vector-search.md`
