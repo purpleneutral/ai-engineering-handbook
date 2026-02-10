@@ -12,14 +12,10 @@ Prompting is interface design: you are shaping behavior through constraints, exa
 - Examples: a small number of representative input-output pairs.
 
 ## Practical Guidelines
-- Be explicit about output format:
-  - "Return JSON matching this schema" beats "respond in JSON".
-- Keep instructions short and stable:
-  - Move long references into RAG or attachments, not the system prompt.
-- Use delimiters for untrusted text:
-  - Example tags: `<reference> ... </reference>`
-- Prefer "do" over "don't":
-  - State what the model must produce rather than listing dozens of prohibitions.
+- Be explicit about output format. "Return JSON matching this schema" beats "respond in JSON".
+- Keep instructions short and stable. Move long references into RAG or attachments, not the system prompt.
+- Use delimiters for untrusted text. Example tags: `<reference> ... </reference>`.
+- Prefer "do" over "don't". State what the model must produce rather than listing dozens of prohibitions.
 
 ## Prompt Skeleton
 ```text
@@ -40,12 +36,9 @@ Task: Extract fields from the reference.
 ```
 
 ## Pitfalls
-- Prompt injection via untrusted text:
-  - Never put untrusted text in the same "instruction channel" as rules.
-- Overlong prompts:
-  - Longer is not always better; it increases cost and can reduce focus.
-- Un-testable prompts:
-  - If you cannot write a regression test for a prompt, expect surprise breakage later.
+- Prompt injection via untrusted text. Never put untrusted text in the same "instruction channel" as rules.
+- Overlong prompts. Longer is not always better; it increases cost and can reduce focus.
+- Un-testable prompts. If you cannot write a regression test for a prompt, expect surprise breakage later.
 
 ## Checklist
 - Is the output machine-validated?
@@ -55,4 +48,3 @@ Task: Extract fields from the reference.
 
 ## References
 - Add prompt design references here.
-

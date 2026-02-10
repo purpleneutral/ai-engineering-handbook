@@ -13,20 +13,14 @@ Most failures in production are not "the model is dumb". They are observability,
 - Policy/config version
 
 ## Observability
-- Log request metadata and artifacts:
-  - prompt id, model id, retrieval ids, tool calls, validation results
-- Do not log secrets/PII:
-  - redact at the edge
-- Add tracing:
-  - measure latency per step (retrieval, tool calls, generation)
+- Logs: request metadata and artifacts (prompt id, model id, retrieval ids, tool calls, validation results).
+- Redaction: do not log secrets/PII; redact at the edge.
+- Tracing: measure latency per step (retrieval, tool calls, generation).
 
 ## Cost And Latency Controls
-- Caching:
-  - prompt/output caching for stable tasks
-- Budgeting:
-  - per-request token budgets and tool budgets
-- Degradation:
-  - fallback models or simpler behavior when under load
+- Caching: prompt/output caching for stable tasks.
+- Budgeting: per-request token budgets and tool budgets.
+- Degradation: fallback models or simpler behavior when under load.
 
 ## Incident Response
 - Define "bad output" categories (safety, correctness, privacy).
@@ -40,4 +34,3 @@ Most failures in production are not "the model is dumb". They are observability,
 
 ## References
 - Add ops references here.
-

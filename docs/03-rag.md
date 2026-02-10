@@ -24,19 +24,14 @@ RAG grounds model outputs in external knowledge by retrieving relevant documents
 - Avoid mixing unrelated topics in a single chunk.
 
 ## RAG Is Not Automatically Safe
-- Retrieved text is untrusted input:
-  - It can contain prompt injection attempts.
-- Apply boundaries:
-  - Keep system rules separate.
-  - Consider extracting facts into a structured intermediate format before generation.
+- Retrieved text is untrusted input and can contain prompt injection attempts.
+- Keep system rules separate from retrieved text.
+- Consider extracting facts into a structured intermediate format before generation.
 
 ## Evaluation
-- Retrieval quality:
-  - "Does it fetch the right stuff?"
-- Answer faithfulness:
-  - "Does the answer match the retrieved text?"
-- Coverage:
-  - "Does it handle hard/rare queries?"
+- Retrieval quality: does it fetch the right stuff?
+- Answer faithfulness: does the answer match the retrieved text?
+- Coverage: does it handle hard/rare queries?
 
 ## Checklist
 - Can you reproduce an answer from logs (query + retrieved chunk ids)?
@@ -46,4 +41,3 @@ RAG grounds model outputs in external knowledge by retrieving relevant documents
 
 ## References
 - Add RAG papers/tools/docs here.
-

@@ -11,22 +11,27 @@ An "agent" is an LLM-driven loop that can plan, call tools, observe results, and
 - You need automation, not just answers.
 
 ## Key Design Choices
-- Tools:
-  - Small, composable, idempotent operations are easier to make reliable.
-- State:
-  - Decide what gets persisted (plan, memory, artifacts, logs).
-- Budgets:
-  - Token/cost limits, wall-clock time, and tool call limits.
-- Autonomy:
-  - Human-in-the-loop checkpoints for high-impact actions.
+### Tools
+- Small, composable, idempotent operations are easier to make reliable.
+
+### State
+- Decide what gets persisted (plan, memory, artifacts, logs).
+
+### Budgets
+- Token/cost limits, wall-clock time, and tool call limits.
+
+### Autonomy
+- Human-in-the-loop checkpoints for high-impact actions.
 
 ## Failure Modes
-- Infinite loops / thrashing:
-  - Agent keeps trying variations without new information.
-- Tool misuse:
-  - Wrong parameters, wrong assumptions, wrong environment.
-- Prompt injection:
-  - Web content and documents can manipulate behavior.
+### Infinite Loops / Thrashing
+- Agent keeps trying variations without new information.
+
+### Tool Misuse
+- Wrong parameters, wrong assumptions, wrong environment.
+
+### Prompt Injection
+- Web content and documents can manipulate behavior.
 
 ## Safety Boundaries
 - Principle of least privilege for tools.
@@ -42,4 +47,3 @@ An "agent" is an LLM-driven loop that can plan, call tools, observe results, and
 
 ## References
 - Add agent framework/docs here.
-

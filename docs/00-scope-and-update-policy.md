@@ -19,13 +19,9 @@ These notes aim to be a durable reference for building reliable AI features, not
 - Replace primary documentation
 
 ## Update Policy (Practical)
-- If it changes quickly, date it:
-  - Example: `As of 2026-02-10, Provider X supports ...`
-- Keep provider-specific details localized:
-  - Add a short subsection instead of sprinkling provider quirks everywhere.
-- Write to "selection criteria" and "tradeoffs":
-  - Your future self can re-check the numbers, but the reasoning stays useful.
+- If it changes quickly, date it. Example: `As of 2026-02-10, Provider X supports ...`
+- Keep provider-specific details localized. Add a short subsection instead of sprinkling provider quirks everywhere.
+- Write to "selection criteria" and "tradeoffs". Your future self can re-check the numbers, but the reasoning stays useful.
 
 ## Page Template
 Use `docs/_template.md` when adding new topics.
-
