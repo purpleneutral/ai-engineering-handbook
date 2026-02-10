@@ -46,4 +46,8 @@ An "agent" is an LLM-driven loop that can plan, call tools, observe results, and
 - Do you log tool calls in a privacy-safe way?
 
 ## References
-- Add agent framework/docs here.
+- ReAct paper (reasoning + acting). https://arxiv.org/abs/2210.03629
+- Toolformer paper (tool-use training). https://arxiv.org/abs/2302.04761
+- OpenAI docs: Function calling. https://platform.openai.com/docs/guides/function-calling
+- Anthropic docs: Tool use. https://docs.anthropic.com/en/docs/build-with-claude/tool-use
+- OWASP Top 10 for LLM Applications (excessive agency, etc.). https://owasp.org/www-project-top-10-for-large-language-model-applications/

@@ -33,4 +33,5 @@ Most failures in production are not "the model is dumb". They are observability,
 - Do you have dashboards for latency, cost, and error rates?
 
 ## References
-- Add ops references here.
+- OpenAI docs: Production best practices. https://platform.openai.com/docs/guides/production-best-practices
+- OpenAI docs: Prompt caching. https://platform.openai.com/docs/guides/prompt-caching

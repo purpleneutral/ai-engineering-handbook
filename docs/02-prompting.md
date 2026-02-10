@@ -47,4 +47,6 @@ Task: Extract fields from the reference.
 - Do you have a regression set for this prompt?
 
 ## References
-- Add prompt design references here.
+- OpenAI docs: Prompt engineering. https://platform.openai.com/docs/guides/prompt-engineering
+- Anthropic docs: Prompt engineering. https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview
+- Chain-of-thought prompting (NeurIPS 2022). https://proceedings.neurips.cc/paper_files/paper/2022/hash/9d5609613524ecf4f15af0f7b31abca4-Abstract-Conference.html

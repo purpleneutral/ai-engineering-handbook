@@ -24,10 +24,13 @@ This repo is a practical, GitHub-friendly reference for modern AI/LLM engineerin
 - `docs/06-safety-privacy-security.md`
 - `docs/07-architecture-recipes.md`
 - `docs/08-ops.md`
+- `docs/11-structured-outputs-and-tool-calling.md`
+- `docs/12-embeddings-and-vector-search.md`
+- `docs/13-staying-current.md`
+- `docs/14-governance-and-risk.md`
 - `docs/09-glossary.md`
 - `docs/10-reading-list.md`
 - `docs/_template.md`
 
 ## Contributing
 See `CONTRIBUTING.md`.
-

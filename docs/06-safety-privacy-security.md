@@ -29,4 +29,7 @@ LLM systems are susceptible to data leakage, prompt injection, and unintended ac
 - Do you have a documented incident response path?
 
 ## References
-- Add security references here.
+- OWASP Top 10 for LLM Applications. https://owasp.org/www-project-top-10-for-large-language-model-applications/
+- NIST AI RMF 1.0. https://www.nist.gov/itl/ai-risk-management-framework
+- NIST Generative AI Profile. https://www.nist.gov/itl/ai-risk-management-framework/generative-ai-profile
+- OpenAI usage policies. https://openai.com/policies/usage-policies/

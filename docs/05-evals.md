@@ -28,4 +28,6 @@ If you cannot measure quality, you cannot improve reliability. Treat prompts and
 - Do you monitor for drift and rising error rates?
 
 ## References
-- Add evaluation references here.
+- MT-Bench / LLM-as-a-judge (Zheng et al.). https://arxiv.org/abs/2306.05685
+- OpenAI Evals (framework). https://github.com/openai/evals
+- Promptfoo (prompt testing). https://github.com/promptfoo/promptfoo

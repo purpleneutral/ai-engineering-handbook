@@ -48,4 +48,8 @@ LLMs are probabilistic text generators (and increasingly multimodal) that can fo
 - Log inputs/outputs safely (redact secrets/PII).
 
 ## References
-- Add primary sources here (vendor docs, papers, specs).
+- Transformers (foundation). https://arxiv.org/abs/1706.03762
+- GPT-3 paper (few-shot learning). https://arxiv.org/abs/2005.14165
+- InstructGPT / RLHF paper. https://arxiv.org/abs/2203.02155
+- Chain-of-thought prompting (NeurIPS 2022). https://proceedings.neurips.cc/paper_files/paper/2022/hash/9d5609613524ecf4f15af0f7b31abca4-Abstract-Conference.html
+- Lost in the Middle (long context behavior). https://doi.org/10.1162/tacl_a_00638

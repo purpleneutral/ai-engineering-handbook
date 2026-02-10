@@ -40,4 +40,5 @@ RAG grounds model outputs in external knowledge by retrieving relevant documents
 - Are you enforcing document access control at retrieval time?
 
 ## References
-- Add RAG papers/tools/docs here.
+- RAG paper (Lewis et al., 2020). https://arxiv.org/abs/2005.11401
+- Dense Passage Retrieval (DPR). https://arxiv.org/abs/2004.04906
