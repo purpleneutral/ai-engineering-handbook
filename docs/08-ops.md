@@ -58,7 +58,7 @@ End-to-end request tracing is essential for understanding system behavior and di
 
 Trace data reveals bottlenecks and anomalies that aggregate metrics can hide. An average latency of 500 milliseconds might conceal a bimodal distribution where most requests complete in 200 milliseconds but 10 percent take 2 seconds due to cache misses in the retrieval layer. Only tracing makes this visible.
 
-Use distributed tracing standards (OpenTelemetry is widely supported) to propagate trace context across service boundaries. This is especially important when your LLM system calls external APIs or delegates work to other services.
+Use distributed tracing standards ([OpenTelemetry](https://opentelemetry.io/) is widely supported) to propagate trace context across service boundaries. This is especially important when your LLM system calls external APIs or delegates work to other services.
 
 ### Dashboards
 
@@ -92,7 +92,7 @@ Caching is the single most effective cost optimization for most LLM systems. Man
 
 **Semantic caching** stores responses keyed by the semantic meaning of the query rather than its exact text. When a new query is sufficiently similar to a cached query (as measured by embedding similarity), the cached response is returned. This captures a broader range of cache hits but introduces the risk of returning a response that does not exactly match the new query.
 
-**Provider-level caching** (such as prompt caching offered by some providers) caches the processing of long prompt prefixes across requests. This is especially valuable for systems with large system prompts or many few-shot examples, because the static portion of the prompt is processed only once and reused across requests.
+**Provider-level caching** (such as [prompt caching](https://platform.openai.com/docs/guides/prompt-caching) offered by some providers) caches the processing of long prompt prefixes across requests. This is especially valuable for systems with large system prompts or many few-shot examples, because the static portion of the prompt is processed only once and reused across requests.
 
 ### Budgeting
 
@@ -155,8 +155,9 @@ After every incident, add one or more test cases to your eval suite that specifi
 - Has the rollback procedure been tested?
 
 ## References
-- OpenAI docs: Production best practices. https://platform.openai.com/docs/guides/production-best-practices
-- OpenAI docs: Prompt caching. https://platform.openai.com/docs/guides/prompt-caching
+- [OpenAI docs: Production best practices](https://platform.openai.com/docs/guides/production-best-practices)
+- [OpenAI docs: Prompt caching](https://platform.openai.com/docs/guides/prompt-caching)
+- [OpenTelemetry](https://opentelemetry.io/)
 
 ---
 [Contents](README.md) | [Prev](07-architecture-recipes.md) | [Next](14-governance-and-risk.md)

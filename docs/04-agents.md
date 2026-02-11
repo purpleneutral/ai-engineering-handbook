@@ -2,7 +2,7 @@
 
 Last reviewed: 2026-02-10
 
-[Contents](README.md) | [Prev](03-rag.md) | [Next](05-evals.md)
+[Contents](README.md) | [Prev](03-rag.md) | [Next](18-model-context-protocol.md)
 
 ## Summary
 An "agent" is an LLM-driven loop that can plan, call tools, observe results, and continue until a goal is met or a budget is exhausted. Unlike a single prompt-response exchange, an agent operates autonomously over multiple steps, making decisions about what to do next based on what it has learned so far. This autonomy is what makes agents powerful and also what makes them dangerous: the same capability that lets an agent solve complex multi-step problems also lets it take unexpected actions, run up costs, or get stuck in unproductive loops.
@@ -41,7 +41,7 @@ This loop looks simple, but the design decisions within it determine whether you
 
 Different agent architectures structure the loop in different ways, with significant implications for reliability and capability.
 
-### ReAct (Reasoning + Acting)
+### [ReAct](https://arxiv.org/abs/2210.03629) (Reasoning + Acting)
 
 The ReAct pattern interleaves reasoning and action in a single stream. At each step, the model first generates a "thought" (a natural language reasoning trace explaining what it knows and what it should do next), then generates an "action" (a tool call), and then receives an "observation" (the tool's output). This thought-action-observation cycle repeats until the agent reaches a conclusion.
 
@@ -148,4 +148,4 @@ Log every tool call, its parameters, and its result. These logs are essential fo
 - OWASP Top 10 for LLM Applications (excessive agency, etc.). https://owasp.org/www-project-top-10-for-large-language-model-applications/
 
 ---
-[Contents](README.md) | [Prev](03-rag.md) | [Next](05-evals.md)
+[Contents](README.md) | [Prev](03-rag.md) | [Next](18-model-context-protocol.md)

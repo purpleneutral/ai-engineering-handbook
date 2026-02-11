@@ -30,26 +30,28 @@ The building blocks that every LLM-powered system relies on. These chapters cove
 
 ### Part II: System Patterns
 
-With the foundations in place, these chapters cover the two dominant architectural patterns for building LLM-powered systems: retrieval-augmented generation and autonomous agents.
+With the foundations in place, these chapters cover the dominant architectural patterns for building LLM-powered systems: retrieval-augmented generation, autonomous agents, and the protocol layer that connects them to external tools.
 
 9. [Retrieval-Augmented Generation (RAG)](03-rag.md) — Grounding model outputs in external knowledge: the full pipeline from ingestion through chunking, retrieval, re-ranking, and grounded synthesis.
 10. [Agents](04-agents.md) — LLM-driven loops that plan, call tools, observe results, and iterate: architecture, design trade-offs, failure modes, and safety boundaries.
+11. [Model Context Protocol (MCP)](18-model-context-protocol.md) — The open standard for connecting LLM applications to external tools and data sources: architecture, primitives, security model, and practical adoption guidance.
 
 ### Part III: Reliability and Production
 
 Building a working prototype is the easy part. These chapters cover what it takes to make LLM systems reliable, safe, and operable at production scale.
 
-11. [Evals and Testing](05-evals.md) — Treating prompts and model behavior as testable code: golden sets, model-graded evaluation, regression testing, and continuous monitoring.
-12. [Safety, Privacy, and Security](06-safety-privacy-security.md) — The expanded attack surface of LLM systems: prompt injection, data exfiltration, tool abuse, data classification, and defense-in-depth strategies.
-13. [Architecture Recipes](07-architecture-recipes.md) — Concrete blueprints for the most common AI feature shapes: chat assistants, document Q&A, extraction pipelines, and workflow automation agents.
-14. [Ops: Shipping and Running LLM Systems](08-ops.md) — The operational concerns that determine whether an LLM feature survives contact with production: versioning, observability, cost control, and incident response.
-15. [Governance and Risk](14-governance-and-risk.md) — Organizational practices for shipping AI responsibly: system documentation, risk assessment, change control, and compliance.
-16. [Staying Current (Without Chasing Hype)](13-staying-current.md) — A practical framework for tracking what matters in a fast-moving field without drowning in noise.
+12. [Evals and Testing](05-evals.md) — Treating prompts and model behavior as testable code: golden sets, model-graded evaluation, regression testing, and continuous monitoring.
+13. [Safety, Privacy, and Security](06-safety-privacy-security.md) — The expanded attack surface of LLM systems: prompt injection, data exfiltration, tool abuse, supply chain security, agent threats, and defense-in-depth strategies.
+14. [Architecture Recipes](07-architecture-recipes.md) — Concrete blueprints for the most common AI feature shapes: chat assistants, document Q&A, extraction pipelines, and workflow automation agents.
+15. [Ops: Shipping and Running LLM Systems](08-ops.md) — The operational concerns that determine whether an LLM feature survives contact with production: versioning, observability, cost control, and incident response.
+16. [Governance and Risk](14-governance-and-risk.md) — Organizational practices for shipping AI responsibly: system documentation, risk assessment, change control, and compliance.
+17. [Staying Current (Without Chasing Hype)](13-staying-current.md) — A practical framework for tracking what matters in a fast-moving field without drowning in noise.
 
 ### Appendices
 
 - [Glossary](09-glossary.md) — Definitions for key terms used throughout this book.
 - [Reading List (Curated)](10-reading-list.md) — Annotated list of foundational papers, primary documentation, and high-signal information sources.
+- [A Brief History of AI and LLMs](19-history-of-ai.md) — From the 1943 McCulloch-Pitts neuron to today's reasoning models: the key milestones, breakthroughs, and winters that shaped the current landscape.
 
 ## Adding New Pages
 

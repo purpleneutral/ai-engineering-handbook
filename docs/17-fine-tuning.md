@@ -51,7 +51,7 @@ The quality of your fine-tuning data is the single most important factor in whet
 
 **Quality over quantity.** Fifty to one hundred excellent examples often produce better results than ten thousand noisy ones. Each example should be a clear, unambiguous demonstration of the behavior you want. If a human expert would disagree with the label or find the example confusing, the model will learn confusion. Audit your data manually before training. Read every example. This feels tedious and it is tedious, but it is the highest-leverage activity in the entire fine-tuning process.
 
-**Data format.** For chat model fine-tuning, training data is typically a JSONL file where each line is a conversation represented as a messages array. Each conversation includes the system prompt (if any), one or more user messages, and the assistant responses you want the model to learn. The format varies slightly between providers, but the structure is consistent:
+**Data format.** For chat model fine-tuning, training data is typically a [JSONL](https://jsonlines.org/) file where each line is a conversation represented as a messages array. Each conversation includes the system prompt (if any), one or more user messages, and the assistant responses you want the model to learn. The format varies slightly between providers, but the structure is consistent:
 
 ```json
 {"messages": [{"role": "system", "content": "Classify the support ticket."}, {"role": "user", "content": "I can't log in to my account"}, {"role": "assistant", "content": "category: account_access"}]}
@@ -74,7 +74,7 @@ The practical workflow follows a predictable sequence. Resist the urge to skip s
 
 **Upload and start the training job.** Most providers offer an API for this. Upload the training file, specify the base model and any hyperparameters (number of epochs, learning rate multiplier, batch size), and start the job.
 
-A basic example using the OpenAI API:
+A basic example using the [OpenAI API](https://platform.openai.com/docs/guides/fine-tuning):
 
 ```python
 from openai import OpenAI

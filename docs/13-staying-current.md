@@ -108,11 +108,11 @@ Subscribe to changelogs and migration guides for the providers you use. These ar
 
 ### Curated Digests (Weekly)
 
-Weekly newsletters and digests are an efficient way to maintain broad awareness without constant monitoring. Good digests filter the noise and surface developments that matter. The key is to find one or two digests that match your interests and information level, and to read them consistently rather than accumulating a backlog.
+Weekly newsletters and digests are an efficient way to maintain broad awareness without constant monitoring. Good digests filter the noise and surface developments that matter. Strong options include [The Batch](https://www.deeplearning.ai/the-batch/) from deeplearning.ai, [Import AI](https://importai.substack.com/), and [NLP News](https://www.nlpnews.org/). The key is to find one or two digests that match your interests and information level, and to read them consistently rather than accumulating a backlog.
 
 ### Research Papers (Selective)
 
-Papers provide the deepest understanding of new techniques but require significant time investment. Read papers selectively: when a new technique is relevant to your work, when you need to understand the foundations of a capability you are using, or when you are evaluating whether a research advance is mature enough for production use. Paper recommendation tools and curated feeds help with discovery.
+Papers provide the deepest understanding of new techniques but require significant time investment. Read papers selectively: when a new technique is relevant to your work, when you need to understand the foundations of a capability you are using, or when you are evaluating whether a research advance is mature enough for production use. Paper recommendation tools and curated feeds help with discovery, such as [Hugging Face Daily Papers](https://huggingface.co/papers), [Papers with Code](https://paperswithcode.com/about), and [arxiv-sanity](https://github.com/karpathy/arxiv-sanity-preserver).
 
 Do not feel obligated to read every trending paper. Most research advances take months or years to reach production readiness, and many never do. Reading the abstract and conclusion is often sufficient to determine whether the full paper warrants your time.
 
@@ -121,12 +121,12 @@ Do not feel obligated to read every trending paper. Most research advances take 
 Conversations with peers who are building similar systems provide practical insights that no publication can match. They tell you what actually works in production, what the documentation does not mention, and what pitfalls to avoid. Cultivate a small network of practitioners whose judgment you trust.
 
 ## References
-- The Batch (deeplearning.ai). https://www.deeplearning.ai/the-batch/
-- Hugging Face: Daily Papers. https://huggingface.co/papers
-- arxiv-sanity-preserver (paper triage tool). https://github.com/karpathy/arxiv-sanity-preserver
-- NLP News (newsletter). https://www.nlpnews.org/
-- Import AI (newsletter archive). https://importai.substack.com/
-- Papers with Code (benchmarks + papers). https://paperswithcode.com/about
+- [The Batch (deeplearning.ai)](https://www.deeplearning.ai/the-batch/)
+- [Hugging Face: Daily Papers](https://huggingface.co/papers)
+- [arxiv-sanity-preserver (paper triage tool)](https://github.com/karpathy/arxiv-sanity-preserver)
+- [NLP News (newsletter)](https://www.nlpnews.org/)
+- [Import AI (newsletter archive)](https://importai.substack.com/)
+- [Papers with Code (benchmarks + papers)](https://paperswithcode.com/about)
 
 ---
 [Contents](README.md) | [Prev](14-governance-and-risk.md) | [Next](09-glossary.md)

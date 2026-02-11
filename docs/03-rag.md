@@ -5,7 +5,7 @@ Last reviewed: 2026-02-10
 [Contents](README.md) | [Prev](17-fine-tuning.md) | [Next](04-agents.md)
 
 ## Summary
-RAG grounds model outputs in external knowledge by retrieving relevant documents and using them as context. Rather than relying solely on what a language model memorized during training, RAG systems fetch up-to-date or domain-specific information at inference time and weave it into the generation process. This makes answers more factual, more auditable, and more controllable than pure generation alone.
+[RAG](https://arxiv.org/abs/2005.11401) grounds model outputs in external knowledge by retrieving relevant documents and using them as context. Rather than relying solely on what a language model memorized during training, RAG systems fetch up-to-date or domain-specific information at inference time and weave it into the generation process. This makes answers more factual, more auditable, and more controllable than pure generation alone.
 
 ## See Also
 - [Embeddings And Vector Search](12-embeddings-and-vector-search.md)
@@ -41,7 +41,7 @@ flowchart LR
 
 **Chunk.** Raw documents are typically too long to use as retrieval units. Chunking splits them into smaller pieces that can be independently embedded and retrieved. This is one of the most consequential design decisions in a RAG system, and it is covered in detail in the next section.
 
-**Embed and index.** Each chunk is passed through an embedding model to produce a dense vector representation, then stored in a vector index (such as FAISS, pgvector, Pinecone, Weaviate, or Qdrant). The choice of embedding model matters: it determines what notion of "similarity" your retrieval operates on. The index configuration matters too, particularly the distance metric (cosine similarity is standard but not universal) and any approximate nearest neighbor parameters that trade recall for speed.
+**Embed and index.** Each chunk is passed through an embedding model to produce a dense vector representation, then stored in a vector index (such as [FAISS](https://github.com/facebookresearch/faiss), [pgvector](https://github.com/pgvector/pgvector), [Pinecone](https://www.pinecone.io/), [Weaviate](https://weaviate.io/), or [Qdrant](https://qdrant.tech/)). The choice of embedding model matters: it determines what notion of "similarity" your retrieval operates on. The index configuration matters too, particularly the distance metric (cosine similarity is standard but not universal) and any approximate nearest neighbor parameters that trade recall for speed.
 
 **Retrieve.** When a user asks a question, the query is embedded using the same model and a similarity search returns the top-k most relevant chunks. This is where filters come in: you may want to restrict results to a particular document collection, a date range, or chunks the user has permission to see. The value of k is a tuning parameter; too few results and you miss relevant information, too many and you dilute the context with noise.
 
@@ -94,9 +94,9 @@ Regardless of strategy, preserve metadata with every chunk. At minimum, record t
 
 ## Hybrid Search
 
-Pure vector search has a well-known weakness: it can miss results that match on specific keywords or identifiers rather than semantic meaning. If a user asks about "error code E-4012," a semantic search might return chunks about error handling in general rather than the specific error code. Conversely, pure keyword search (BM25 or similar) excels at exact matches but misses paraphrases and conceptual similarity.
+Pure vector search has a well-known weakness: it can miss results that match on specific keywords or identifiers rather than semantic meaning. If a user asks about "error code E-4012," a semantic search might return chunks about error handling in general rather than the specific error code. Conversely, pure keyword search ([BM25](https://en.wikipedia.org/wiki/Okapi_BM25) or similar) excels at exact matches but misses paraphrases and conceptual similarity.
 
-Hybrid search combines both approaches. A typical implementation runs a vector search and a keyword search in parallel, then merges the results using reciprocal rank fusion (RRF) or a learned score combination. The vector search contributes semantic understanding while the keyword search contributes lexical precision.
+Hybrid search combines both approaches. A typical implementation runs a vector search and a keyword search in parallel, then merges the results using [reciprocal rank fusion (RRF)](https://plg.uwaterloo.ca/~gvcormac/cormack_sigir09.pdf) or a learned score combination. The vector search contributes semantic understanding while the keyword search contributes lexical precision.
 
 Many vector databases now support hybrid search natively, making it straightforward to adopt. If yours does not, you can implement it at the application layer by running both searches and merging results before re-ranking. In practice, hybrid search almost always outperforms either approach alone, and the additional complexity is modest.
 
@@ -106,7 +106,7 @@ The initial retrieval step uses a bi-encoder: query and documents are embedded i
 
 A cross-encoder re-ranker processes each (query, document) pair through a single model, producing a relevance score that accounts for word-level interactions. This is dramatically more accurate but also dramatically more expensive, which is why it is applied only to the top-k results from the initial retrieval rather than the entire corpus.
 
-Practical re-ranking considerations include the choice of re-ranker model (Cohere Rerank, cross-encoder models from Hugging Face, or custom-trained models), the number of candidates to re-rank (typically 20 to 100, then trimmed to the final top-k for synthesis), and latency impact (re-ranking adds 50 to 200 milliseconds depending on the model and candidate count).
+Practical re-ranking considerations include the choice of re-ranker model ([Cohere Rerank](https://docs.cohere.com/docs/rerank), cross-encoder models from [Hugging Face](https://huggingface.co/cross-encoder), or custom-trained models), the number of candidates to re-rank (typically 20 to 100, then trimmed to the final top-k for synthesis), and latency impact (re-ranking adds 50 to 200 milliseconds depending on the model and candidate count).
 
 For some applications, a lightweight alternative to cross-encoder re-ranking is to use the language model itself as a re-ranker by asking it to score or sort the retrieved chunks by relevance. This is slower and more expensive than a dedicated re-ranker but can be effective when you do not want to deploy an additional model.
 

@@ -81,7 +81,7 @@ Extraction is the pattern of converting unstructured text into structured data: 
 
 ### Data Flow
 
-The input is unstructured text (an invoice, a contract clause, a medical note, a customer email). The text is passed to the model along with a schema that defines the expected output structure (JSON Schema, Pydantic model, or equivalent) and instructions that describe how to extract each field, including examples of tricky cases. The model produces a structured output that is validated against the schema. If validation fails, the system can retry with an error message explaining what went wrong.
+The input is unstructured text (an invoice, a contract clause, a medical note, a customer email). The text is passed to the model along with a schema that defines the expected output structure ([JSON Schema](https://json-schema.org/), [Pydantic](https://docs.pydantic.dev/) model, or equivalent) and instructions that describe how to extract each field, including examples of tricky cases. The model produces a structured output that is validated against the schema. If validation fails, the system can retry with an error message explaining what went wrong.
 
 For long documents that exceed the context window, the text must be processed in segments. This introduces the challenge of merging partial extractions: if an entity spans two segments, or if context from an earlier segment is needed to interpret a later one, the extraction logic must handle this.
 
@@ -113,7 +113,7 @@ Workflow automation uses an agent to accomplish multi-step tasks by interacting 
 
 ### Data Flow
 
-The agent receives a goal (either from a user request or a triggered event), formulates a plan (either explicitly as a plan-and-execute architecture or implicitly as ReAct reasoning), and then iterates through a loop of tool calls and observations. Each tool call interacts with an external system (an API, a database, a file system, a messaging platform), and the result feeds back into the agent's decision-making for the next step.
+The agent receives a goal (either from a user request or a triggered event), formulates a plan (either explicitly as a plan-and-execute architecture or implicitly as [ReAct](https://arxiv.org/abs/2210.03629) reasoning), and then iterates through a loop of tool calls and observations. Each tool call interacts with an external system (an API, a database, a file system, a messaging platform), and the result feeds back into the agent's decision-making for the next step.
 
 The critical data flow consideration is the feedback loop between the agent and its environment. Unlike a chat assistant where data flows in one direction (user question to model answer), an agent's actions change the environment, which changes the observations, which change the agent's decisions. This feedback loop can amplify errors: a wrong action produces a confusing observation, which leads to another wrong action.
 
@@ -148,8 +148,8 @@ When combining recipes, pay attention to the interfaces between them. The output
 Design for observability across the full pipeline. When a user reports a problem, you need to be able to trace the issue back through every stage to find the root cause. This requires consistent request identifiers, structured logging at each stage, and tooling that lets you reconstruct the full processing chain for any given request.
 
 ## References
-- OpenAI docs: Production best practices. https://platform.openai.com/docs/guides/production-best-practices
-- OpenAI docs: Safety best practices. https://platform.openai.com/docs/guides/safety-best-practices
+- [OpenAI docs: Production best practices](https://platform.openai.com/docs/guides/production-best-practices)
+- [OpenAI docs: Safety best practices](https://platform.openai.com/docs/guides/safety-best-practices)
 
 ---
 [Contents](README.md) | [Prev](06-safety-privacy-security.md) | [Next](08-ops.md)

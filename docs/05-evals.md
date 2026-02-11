@@ -2,7 +2,7 @@
 
 Last reviewed: 2026-02-10
 
-[Contents](README.md) | [Prev](04-agents.md) | [Next](06-safety-privacy-security.md)
+[Contents](README.md) | [Prev](18-model-context-protocol.md) | [Next](06-safety-privacy-security.md)
 
 ## Summary
 If you cannot measure quality, you cannot improve reliability. Treat prompts and model behavior as code: version, test, and monitor. Evals are the practice of systematically measuring how well your LLM system performs, and they serve the same role for AI systems that automated tests serve for traditional software. The difference is that LLM outputs are non-deterministic, subjective, and often lack a single correct answer, which makes evaluation harder but not less important.
@@ -88,7 +88,7 @@ Human review does not scale to every change, so use it strategically: for major 
 
 ### Model-Graded Evaluation
 
-Using one LLM to evaluate another LLM's output is increasingly common and can provide a useful middle ground between fully automated metrics and expensive human review. A "judge" model receives the input, the system's output, and evaluation criteria, then produces a quality score or a pass/fail determination.
+Using one LLM to evaluate another LLM's output --- sometimes called [LLM-as-a-Judge](https://arxiv.org/abs/2306.05685) --- is increasingly common and can provide a useful middle ground between fully automated metrics and expensive human review. A "judge" model receives the input, the system's output, and evaluation criteria, then produces a quality score or a pass/fail determination.
 
 Model-graded evaluation has real strengths: it scales well, it can assess nuanced quality dimensions that simple string matching cannot, and it can provide explanations for its scores. However, it also has significant pitfalls that must be managed carefully.
 
@@ -150,4 +150,4 @@ Connect production monitoring back to your eval pipeline. When production monito
 - Promptfoo (prompt testing). https://github.com/promptfoo/promptfoo
 
 ---
-[Contents](README.md) | [Prev](04-agents.md) | [Next](06-safety-privacy-security.md)
+[Contents](README.md) | [Prev](18-model-context-protocol.md) | [Next](06-safety-privacy-security.md)

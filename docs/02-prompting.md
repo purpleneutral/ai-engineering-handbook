@@ -39,7 +39,7 @@ A well-structured prompt has four components, and getting the order and separati
 
 ## Few-Shot Prompting
 
-Few-shot prompting means including a small number of example input-output pairs in the prompt to demonstrate the desired behavior. This is one of the most powerful and underused techniques in production prompt engineering.
+[Few-shot prompting](https://arxiv.org/abs/2005.14165) means including a small number of example input-output pairs in the prompt to demonstrate the desired behavior. This is one of the most powerful and underused techniques in production prompt engineering.
 
 The idea is simple: instead of describing what you want in abstract rules, you show the model concrete examples. The model generalizes from the examples to handle new inputs. This works because LLMs are exceptionally good at pattern matching -- they can infer format, style, level of detail, edge case handling, and even implicit rules from just a few demonstrations.
 
@@ -73,9 +73,9 @@ Zero-shot prompting (no examples) works well for straightforward tasks where the
 
 ## Chain-Of-Thought Prompting
 
-Chain-of-thought (CoT) prompting asks the model to show its reasoning before giving a final answer. This is not just a presentation preference -- it materially improves accuracy on tasks that require multi-step reasoning, arithmetic, logical deduction, or complex judgment.
+[Chain-of-thought (CoT) prompting](https://proceedings.neurips.cc/paper_files/paper/2022/hash/9d5609613524ecf4f15af0f7b31abca4-Abstract-Conference.html) asks the model to show its reasoning before giving a final answer. This is not just a presentation preference -- it materially improves accuracy on tasks that require multi-step reasoning, arithmetic, logical deduction, or complex judgment.
 
-The mechanism is straightforward: by generating intermediate reasoning steps as tokens, the model effectively gives itself "scratch space" to work through a problem. Each generated token becomes part of the context for the next token, so the model can build on its own reasoning rather than trying to jump directly to an answer. Research has shown that CoT prompting can improve accuracy by 10-40% on reasoning-heavy tasks compared to direct answer prompting.
+The mechanism is straightforward: by generating intermediate reasoning steps as tokens, the model effectively gives itself "scratch space" to work through a problem. Each generated token becomes part of the context for the next token, so the model can build on its own reasoning rather than trying to jump directly to an answer. [Research](https://proceedings.neurips.cc/paper_files/paper/2022/hash/9d5609613524ecf4f15af0f7b31abca4-Abstract-Conference.html) has shown that CoT prompting can improve accuracy by 10-40% on reasoning-heavy tasks compared to direct answer prompting.
 
 There are two main approaches. **Explicit CoT** includes a directive like "Think step by step before answering" or "First, analyze the key factors, then provide your conclusion." **Few-shot CoT** includes examples where the reasoning is shown:
 
@@ -155,7 +155,7 @@ Task: Extract fields from the reference.
 
 This skeleton embodies the key principles: rules come first in the system message, the schema is provided explicitly, a concrete example demonstrates the expected behavior, untrusted text is delimited in the user message, and the task is stated clearly. Adapt the structure to your use case, but preserve the separation between rules, examples, and data.
 
-A runnable version of this pattern using the OpenAI Python SDK:
+A runnable version of this pattern using the [OpenAI Python SDK](https://platform.openai.com/docs/libraries):
 
 ```python
 from openai import OpenAI
@@ -178,7 +178,7 @@ print(response.choices[0].message.content)
 
 **Prompt injection via untrusted text.** This is the most serious prompt failure mode. Never place untrusted text in the same "instruction channel" as your rules. If a retrieved document or user input contains text like "Ignore all previous instructions and...", the model may comply. Delimiters help but are not foolproof. Defense in depth -- input sanitization, output validation, and limiting the model's capabilities -- is essential. See the [Safety, Privacy, And Security](06-safety-privacy-security.md) chapter for detailed mitigation strategies.
 
-**Overlong prompts.** There is a persistent myth that more detail is always better. In practice, longer prompts increase cost, increase latency, and can reduce the model's focus on your most important instructions. The "lost in the middle" phenomenon means that instructions buried in the middle of a long prompt may be effectively ignored. Be concise. If you need to provide extensive reference material, use RAG to retrieve only the relevant portions rather than including everything.
+**Overlong prompts.** There is a persistent myth that more detail is always better. In practice, longer prompts increase cost, increase latency, and can reduce the model's focus on your most important instructions. The ["lost in the middle"](https://doi.org/10.1162/tacl_a_00638) phenomenon means that instructions buried in the middle of a long prompt may be effectively ignored. Be concise. If you need to provide extensive reference material, use RAG to retrieve only the relevant portions rather than including everything.
 
 **Un-testable prompts.** If you cannot write an automated regression test for a prompt, you are building on sand. Prompts drift in behavior when models are updated, when context changes, and when edge cases appear. A regression set -- a collection of representative inputs with expected outputs -- is the minimum viable safety net. See the [Evals And Testing](05-evals.md) chapter for how to build one.
 

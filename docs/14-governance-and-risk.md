@@ -42,7 +42,7 @@ Reliability governance focuses on evaluation practices (measuring quality system
 
 ### Compliance
 
-Compliance risk varies dramatically by organization and jurisdiction. Healthcare organizations face HIPAA requirements for PHI. Financial institutions face regulations around automated decision-making. Organizations operating in the EU face the AI Act's requirements for high-risk AI systems. Consumer-facing applications face data protection regulations (GDPR, CCPA, and their counterparts worldwide).
+Compliance risk varies dramatically by organization and jurisdiction. Healthcare organizations face [HIPAA](https://www.hhs.gov/hipaa/index.html) requirements for PHI. Financial institutions face regulations around automated decision-making. Organizations operating in the EU face the [AI Act](https://artificialintelligenceact.eu/)'s requirements for high-risk AI systems. Consumer-facing applications face data protection regulations ([GDPR](https://gdpr.eu/), [CCPA](https://oag.ca.gov/privacy/ccpa), and their counterparts worldwide).
 
 The governance challenge is that compliance requirements for AI are still evolving, and many regulations were written before LLM systems existed. This means that compliance teams may not have clear guidance on how to apply existing regulations to LLM systems, and the organization must make reasonable interpretations that may be tested later. Document these interpretations and the reasoning behind them so that you can demonstrate good faith if questions arise.
 
@@ -54,7 +54,7 @@ Documentation is the foundation of governance. You cannot manage what you have n
 
 **System inventory.** Maintain a catalog of every AI-powered feature in your organization, including the model and provider, the prompt versions in use, the tools and permissions available, the data sources (retrieval corpora, databases, APIs), and the intended use case and user population. This inventory should be a living document updated as part of every deployment.
 
-**Model cards.** For each model deployment, create a model card that describes the model's capabilities and limitations, the tasks it is used for, the data it has access to, known failure modes, and any restrictions on its use. Model cards were originally proposed for ML models in general, but they are equally valuable for LLM deployments. They do not need to be elaborate; a one-page summary that captures the essentials is far better than nothing.
+**[Model cards](https://arxiv.org/abs/1810.03993).** For each model deployment, create a model card that describes the model's capabilities and limitations, the tasks it is used for, the data it has access to, known failure modes, and any restrictions on its use. Model cards were originally proposed for ML models in general, but they are equally valuable for LLM deployments. They do not need to be elaborate; a one-page summary that captures the essentials is far better than nothing.
 
 **Data classification and handling.** Document what data enters the system (inputs, retrieved documents, user profiles), what data the system produces (outputs, logs, artifacts), and the classification level of each data type. Map each data flow against your data handling policies to identify gaps. See the [Safety, Privacy, And Security](06-safety-privacy-security.md) chapter for a data classification framework.
 
@@ -110,11 +110,12 @@ Risk priority is determined by the combination of all three: high-likelihood, hi
 - Can you reproduce any flagged output from logged artifacts?
 
 ## References
-- NIST AI Risk Management Framework (AI RMF 1.0). https://www.nist.gov/itl/ai-risk-management-framework
-- NIST Generative AI Profile (GenAI risk guidance). https://www.nist.gov/itl/ai-risk-management-framework/generative-ai-profile
-- OWASP Top 10 for LLM Applications. https://owasp.org/www-project-top-10-for-large-language-model-applications/
-- OpenAI usage policies. https://openai.com/policies/usage-policies/
-- OpenAI "Your data" guide (data handling controls). https://platform.openai.com/docs/guides/your-data
+- [NIST AI Risk Management Framework (AI RMF 1.0)](https://www.nist.gov/itl/ai-risk-management-framework)
+- [NIST Generative AI Profile (GenAI risk guidance)](https://www.nist.gov/itl/ai-risk-management-framework/generative-ai-profile)
+- [OWASP Top 10 for LLM Applications](https://owasp.org/www-project-top-10-for-large-language-model-applications/)
+- [OpenAI usage policies](https://openai.com/policies/usage-policies/)
+- [OpenAI "Your data" guide (data handling controls)](https://platform.openai.com/docs/guides/your-data)
+- [Model Cards for Model Reporting (Mitchell et al., 2019)](https://arxiv.org/abs/1810.03993)
 
 ---
 [Contents](README.md) | [Prev](08-ops.md) | [Next](13-staying-current.md)
