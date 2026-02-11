@@ -48,7 +48,7 @@ This glossary defines key terms used throughout this book. Terms are listed alph
 
 **Few-Shot Prompting** — Including a small number of example input-output pairs in the prompt to demonstrate the desired behavior. Effective for formatting, edge cases, and tasks where instructions alone are ambiguous. See [Prompting](02-prompting.md).
 
-**Fine-Tuning** — Additional training of a pre-trained model on a task-specific or domain-specific dataset. Changes model weights (unlike prompting, which only changes input). Useful when prompting alone cannot achieve the required behavior. See [LLM Fundamentals](01-llm-fundamentals.md).
+**Fine-Tuning** — Additional training of a pre-trained model on a task-specific or domain-specific dataset. Changes model weights (unlike prompting, which only changes input). Primarily adjusts behavior, style, and format rather than adding factual knowledge. Useful when prompting alone cannot achieve the required behavior. See [Fine-Tuning and Model Customization](17-fine-tuning.md).
 
 **Format Drift** — A failure mode in which the model's output gradually deviates from a required format (JSON schema, specific template) over the course of a conversation or across requests. See [LLM Fundamentals](01-llm-fundamentals.md).
 

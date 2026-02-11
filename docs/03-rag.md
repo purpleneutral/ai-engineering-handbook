@@ -2,7 +2,7 @@
 
 Last reviewed: 2026-02-10
 
-[Contents](README.md) | [Prev](12-embeddings-and-vector-search.md) | [Next](04-agents.md)
+[Contents](README.md) | [Prev](17-fine-tuning.md) | [Next](04-agents.md)
 
 ## Summary
 RAG grounds model outputs in external knowledge by retrieving relevant documents and using them as context. Rather than relying solely on what a language model memorized during training, RAG systems fetch up-to-date or domain-specific information at inference time and weave it into the generation process. This makes answers more factual, more auditable, and more controllable than pure generation alone.
@@ -48,6 +48,35 @@ flowchart LR
 **Re-rank.** The initial retrieval step optimizes for recall: casting a wide net to avoid missing relevant chunks. A re-ranking step can then optimize for precision by scoring each retrieved chunk more carefully against the query. Cross-encoder models are the standard approach here. Unlike the bi-encoder used during initial retrieval (which embeds query and document independently), a cross-encoder processes the query and document together, enabling much richer interaction between them. Re-ranking is optional but consistently improves answer quality, especially when the initial retrieval returns a mix of relevant and tangential results.
 
 **Synthesize.** Finally, the retrieved chunks are assembled into a prompt alongside the user's question and any system instructions, and the language model generates an answer. The synthesis prompt should instruct the model to ground its answer in the provided context, to cite which chunks support each claim, and to acknowledge when the retrieved information is insufficient to answer the question.
+
+A minimal end-to-end RAG example using the OpenAI SDK:
+
+```python
+from openai import OpenAI
+
+client = OpenAI()
+
+# 1. Embed the query
+query = "What is the return policy?"
+q_vec = client.embeddings.create(
+    model="text-embedding-3-small", input=[query]
+).data[0].embedding
+
+# 2. Retrieve (pseudocode — replace with your vector store query)
+# chunks = vector_store.query(q_vec, top_k=3)
+chunks = ["Returns accepted within 30 days with receipt.", "Refunds processed in 5-7 days."]
+
+# 3. Synthesize
+response = client.chat.completions.create(
+    model="gpt-4o",
+    messages=[
+        {"role": "system", "content": "Answer using only the provided context. Cite sources."},
+        {"role": "user", "content": f"Context:\n{chr(10).join(chunks)}\n\nQuestion: {query}"},
+    ],
+)
+
+print(response.choices[0].message.content)
+```
 
 ## Chunking Strategies
 
@@ -132,4 +161,4 @@ Run retrieval evals and end-to-end evals separately. When end-to-end quality dro
 - RAGAS evaluation framework. https://docs.ragas.io/
 
 ---
-[Contents](README.md) | [Prev](12-embeddings-and-vector-search.md) | [Next](04-agents.md)
+[Contents](README.md) | [Prev](17-fine-tuning.md) | [Next](04-agents.md)

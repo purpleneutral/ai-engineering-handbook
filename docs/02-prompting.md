@@ -155,6 +155,25 @@ Task: Extract fields from the reference.
 
 This skeleton embodies the key principles: rules come first in the system message, the schema is provided explicitly, a concrete example demonstrates the expected behavior, untrusted text is delimited in the user message, and the task is stated clearly. Adapt the structure to your use case, but preserve the separation between rules, examples, and data.
 
+A runnable version of this pattern using the OpenAI Python SDK:
+
+```python
+from openai import OpenAI
+
+client = OpenAI()
+
+response = client.chat.completions.create(
+    model="gpt-4o",
+    messages=[
+        {"role": "system", "content": "You are a helpful assistant that responds in JSON."},
+        {"role": "user", "content": "List three capitals in Europe."},
+    ],
+    temperature=0,
+)
+
+print(response.choices[0].message.content)
+```
+
 ## Pitfalls
 
 **Prompt injection via untrusted text.** This is the most serious prompt failure mode. Never place untrusted text in the same "instruction channel" as your rules. If a retrieved document or user input contains text like "Ignore all previous instructions and...", the model may comply. Delimiters help but are not foolproof. Defense in depth -- input sanitization, output validation, and limiting the model's capabilities -- is essential. See the [Safety, Privacy, And Security](06-safety-privacy-security.md) chapter for detailed mitigation strategies.

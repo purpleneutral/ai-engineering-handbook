@@ -46,6 +46,38 @@ Size the golden set for your iteration speed. If running the full set takes an h
 
 Version the golden set alongside your prompts and code. When you update the golden set (adding cases, correcting labels), treat it as a meaningful change that should be reviewed and documented.
 
+A minimal golden-set eval loop using the OpenAI SDK:
+
+```python
+import json
+
+# A minimal golden-set eval loop
+golden_set = [
+    {"input": "Extract the date: 'Meeting on Jan 5th'", "expected": "2025-01-05"},
+    {"input": "Extract the date: 'Due by March 20, 2026'", "expected": "2026-03-20"},
+]
+
+from openai import OpenAI
+client = OpenAI()
+
+results = []
+for case in golden_set:
+    response = client.chat.completions.create(
+        model="gpt-4o",
+        messages=[
+            {"role": "system", "content": "Extract the date as YYYY-MM-DD. Return only the date."},
+            {"role": "user", "content": case["input"]},
+        ],
+        temperature=0,
+    )
+    output = response.choices[0].message.content.strip()
+    results.append({"input": case["input"], "expected": case["expected"],
+                     "actual": output, "pass": output == case["expected"]})
+
+pass_rate = sum(r["pass"] for r in results) / len(results)
+print(f"Pass rate: {pass_rate:.0%}")
+```
+
 ### Human Review
 
 Human evaluation is the gold standard for subjective quality dimensions: tone, helpfulness, clarity, cultural appropriateness, and overall user experience. No automated metric fully captures whether an answer "feels right" to a human reader.

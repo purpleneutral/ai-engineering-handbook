@@ -65,6 +65,32 @@ Here is a concrete example. Suppose you are extracting contact information from 
 
 Notice the deliberate choices: nullable fields for optional information (so the model returns `null` instead of hallucinating), an enum for a constrained field (so the model cannot invent roles), a pattern for phone numbers (to catch obvious hallucinations), and `additionalProperties: false` to prevent the model from adding unexpected fields.
 
+A runnable example using the OpenAI SDK with Pydantic for structured outputs:
+
+```python
+from openai import OpenAI
+from pydantic import BaseModel
+
+client = OpenAI()
+
+class CalendarEvent(BaseModel):
+    name: str
+    date: str
+    participants: list[str]
+
+response = client.beta.chat.completions.parse(
+    model="gpt-4o",
+    messages=[
+        {"role": "system", "content": "Extract event details from the text."},
+        {"role": "user", "content": "Alice and Bob are meeting for lunch next Tuesday."},
+    ],
+    response_format=CalendarEvent,
+)
+
+event = response.choices[0].message.parsed
+print(event)  # name='Lunch' date='next Tuesday' participants=['Alice', 'Bob']
+```
+
 ### Tool Calling (Function Calling)
 
 Tool calling (also called function calling) lets the model emit a structured request to invoke one of a set of predefined functions, instead of producing free-form text. You define each tool with a name, a description, and an input schema. The model sees these definitions and can choose to call a tool when appropriate.
@@ -104,6 +130,43 @@ A tool definition looks like this:
 When the model decides to call this tool, it emits a structured JSON object with the tool name and arguments. Your code then executes the actual function, and returns the results to the model as a tool response message. The model can then use those results to formulate its final answer, or decide to call another tool.
 
 The critical design principle is that your code executes the tool, not the model. The model only decides what to call and with what arguments. This means you can add authorization checks, rate limiting, input validation, audit logging, and any other controls between the model's request and the actual execution. The model proposes; your code disposes.
+
+A runnable example of defining and invoking a tool with the OpenAI SDK:
+
+```python
+import json
+from openai import OpenAI
+
+client = OpenAI()
+
+tools = [
+    {
+        "type": "function",
+        "function": {
+            "name": "get_weather",
+            "description": "Get the current weather for a city.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "city": {"type": "string", "description": "City name"},
+                },
+                "required": ["city"],
+            },
+        },
+    }
+]
+
+response = client.chat.completions.create(
+    model="gpt-4o",
+    messages=[{"role": "user", "content": "What's the weather in Tokyo?"}],
+    tools=tools,
+)
+
+tool_call = response.choices[0].message.tool_calls[0]
+args = json.loads(tool_call.function.arguments)
+print(f"Function: {tool_call.function.name}, Args: {args}")
+# Function: get_weather, Args: {'city': 'Tokyo'}
+```
 
 Tool descriptions matter more than most people realize. The model uses the description to decide when to call a tool and how to construct arguments. A vague description like "search stuff" will produce worse tool selection than "Search the internal knowledge base for documents matching a natural language query. Use this when the user asks about company policies, procedures, or internal documentation."
 
