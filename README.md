@@ -2,6 +2,8 @@
 
 Last reviewed: 2026-02-10
 
+> **Disclaimer:** This is a personal reference — my own notes on AI/LLM engineering, compiled for my own use and shared as-is. It is not official documentation, professional advice, or an authoritative source. The AI field changes rapidly; information here may be outdated, incomplete, or incorrect by the time you read it. Always verify claims against primary sources (vendor docs, papers, specifications) before making decisions. No warranties, no guarantees, use at your own risk.
+
 ## About This Book
 
 This is a practitioner's guide to building reliable systems with large language models. It is written for software engineers, technical leads, and architects who need to ship AI-powered features that work in production — not just in demos.
