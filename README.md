@@ -161,4 +161,16 @@ The following is a curated index of tools, frameworks, and services commonly use
 
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md).
+This handbook grows with community input. There are several ways to get involved:
+
+**Suggest a topic.** Open a [GitHub Issue](../../issues/new?template=topic-request.md&labels=topic-request&title=%5BTopic+Request%5D+) describing what you'd like covered and why it matters. Topic requests help prioritize what gets written next.
+
+**Report an error or stale information.** If something is wrong, outdated, or misleading, [open an issue](../../issues/new?labels=correction). Include a link to the relevant section and, ideally, a primary source with the correct information.
+
+**Contribute directly.** See [CONTRIBUTING.md](CONTRIBUTING.md) for editorial guidelines, style conventions, and the suggested workflow for pull requests.
+
+## Support
+
+If you find this reference useful, consider supporting its development:
+
+[![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-support-yellow?style=flat&logo=buy-me-a-coffee)](https://buymeacoffee.com/uniqueuserg)

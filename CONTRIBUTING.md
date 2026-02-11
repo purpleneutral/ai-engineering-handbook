@@ -46,7 +46,21 @@ Links in the [Tool Index](README.md#tool-index-curated) and [Reading List](docs/
 - If you include install commands, date-stamp volatile ones with `As of YYYY-MM-DD`.
 - Include a difficulty tag where applicable: **Easy**, **Medium**, or **Hard**.
 
-## Suggested Workflow
+## Suggesting Topics
+
+You don't need to write a chapter to contribute. If there's a topic you'd like covered, open a [Topic Request](../../issues/new?template=topic-request.md&labels=topic-request&title=%5BTopic+Request%5D+) issue describing what you'd like to see and why it matters. Good topic requests include:
+
+- A clear description of the topic and its scope.
+- Why it's useful for someone building AI/LLM systems.
+- Links to primary sources (papers, docs, specs) if you have them.
+
+Topic requests help prioritize what gets written next and ensure the handbook covers what practitioners actually need.
+
+## Reporting Errors
+
+If something is wrong, outdated, or misleading, open a [Correction](../../issues/new?template=correction.md&labels=correction) issue. Include a link to the relevant section and, ideally, a primary source with the correct information.
+
+## Suggested Workflow (Pull Requests)
 
 1. Add or update a page in `docs/`.
 2. If you add a new page, update `docs/README.md` (the table of contents) and wire up Prev/Next links on the adjacent pages.
