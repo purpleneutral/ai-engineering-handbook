@@ -82,11 +82,15 @@ This glossary defines key terms used throughout this book. Terms are listed alph
 
 **Idempotent** — A property of an operation meaning it can be safely repeated without changing the result beyond the first execution. Critical for tool design in agent systems, where retries are common. See [Agents](04-agents.md).
 
+**Inference** — The process of running a trained model to produce outputs from inputs. In the context of LLMs, inference means generating text (or structured output) in response to a prompt. Inference cost, latency, and throughput are primary operational concerns for production systems. See [LLM Fundamentals](01-llm-fundamentals.md).
+
 ## J
 
 **[JSON Schema](https://json-schema.org/)** — A vocabulary for annotating and validating JSON documents. Used to define the expected structure of model outputs in structured output and tool calling scenarios. See [Structured Outputs and Tool Calling](11-structured-outputs-and-tool-calling.md).
 
 ## L
+
+**Latency** — The time between sending a request and receiving the complete response. In LLM systems, latency has two components: time-to-first-token (TTFT), which determines how quickly the user sees the response begin, and total generation time, which depends on output length. Latency is affected by model size, input length, output length, provider load, and whether streaming is used. See [Ops: Shipping and Running LLM Systems](08-ops.md).
 
 **[LoRA](https://arxiv.org/abs/2106.09685) (Low-Rank Adaptation)** — A parameter-efficient fine-tuning technique that freezes the pre-trained model weights and injects small, trainable low-rank decomposition matrices into each transformer layer. LoRA can reduce the number of trainable parameters by 10,000x compared to full fine-tuning while achieving comparable quality, making it practical to fine-tune large models on limited hardware. Introduced by Hu et al. (2021). See [Fine-Tuning and Model Customization](17-fine-tuning.md).
 
@@ -110,6 +114,8 @@ This glossary defines key terms used throughout this book. Terms are listed alph
 
 **PII (Personally Identifiable Information)** — Any data that can be used to identify an individual (names, email addresses, phone numbers, etc.). Must be handled carefully in prompts, logs, and model outputs. See [Safety, Privacy, and Security](06-safety-privacy-security.md).
 
+**Pre-training** — The initial, large-scale training phase of an LLM in which the model learns language by predicting the next token on a massive corpus (typically trillions of tokens from the web, books, and code). Pre-training is enormously expensive and produces a base model with broad knowledge but no instruction-following behavior. Subsequent stages (supervised fine-tuning, RLHF) shape the base model into a usable assistant. See [LLM Fundamentals](01-llm-fundamentals.md).
+
 **Prompt Caching** — The practice of caching repeated prompt prefixes so that subsequent API calls sharing the same prefix avoid redundant computation, reducing both cost and latency. Most major LLM providers now offer prompt caching in some form. Effective prompt design for caching places stable content (system prompts, instructions, reference material) at the beginning and variable content (user messages) at the end. See also Context Caching.
 
 **Prompt Injection** — An attack in which untrusted text (user input, retrieved documents, web content) contains instructions that override or subvert the system's intended behavior. The most distinctive security risk of LLM systems. See [Safety, Privacy, and Security](06-safety-privacy-security.md).
@@ -117,6 +123,8 @@ This glossary defines key terms used throughout this book. Terms are listed alph
 ## Q
 
 **[QLoRA](https://arxiv.org/abs/2305.14314) (Quantized LoRA)** — An extension of LoRA that applies low-rank adaptation to a 4-bit quantized base model, dramatically reducing the memory required for fine-tuning. QLoRA introduced 4-bit NormalFloat (NF4) quantization and double quantization, enabling fine-tuning of a 65B-parameter model on a single 48GB GPU while preserving full 16-bit fine-tuning quality. Introduced by Dettmers et al. (2023). See [Fine-Tuning and Model Customization](17-fine-tuning.md).
+
+**Quantization** — The process of reducing the numerical precision of model weights (e.g., from 16-bit floating point to 8-bit or 4-bit integers) to decrease model size and memory requirements, enabling deployment on smaller hardware. Quantization introduces a small quality trade-off but can reduce model size by 2--4x with minimal impact on output quality for many tasks. Common formats include GPTQ, AWQ, and GGUF. See [Fine-Tuning and Model Customization](17-fine-tuning.md) and [Installation and Local Setup](15-installation-and-local-setup.md).
 
 ## R
 

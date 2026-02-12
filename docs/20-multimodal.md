@@ -251,7 +251,7 @@ Multimodal inputs introduce attack surfaces that do not exist in text-only syste
 
 Just as text inputs can contain instructions that override system behavior, images can contain hidden or embedded text that the model reads and follows. An attacker can embed instructions in an image --- as small text, as part of a pattern, or as steganographic content --- that manipulate the model's behavior.
 
-Research presented at [ICML 2025](https://arxiv.org/html/2509.05883v1) demonstrated that visual prompt injection attacks achieve an 84.8% success rate against GPT-4o. The [mind map injection technique](https://www.mdpi.com/2079-9292/14/10/1907) achieved over 90% attack success rates on both GPT-4o and Gemini by embedding instructions within mind map diagrams. These are not theoretical concerns --- they work against production models today.
+A [2025 survey on multimodal prompt injection](https://arxiv.org/abs/2509.05883) documented transfer-based attacks achieving high success rates against production models including GPT-4o. The [mind map injection technique](https://www.mdpi.com/2079-9292/14/10/1907) achieved over 90% attack success rates on both GPT-4o and Gemini by embedding instructions within mind map diagrams. These are not theoretical concerns --- they work against production models today.
 
 ### Cross-Modal Attacks
 

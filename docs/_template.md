@@ -2,7 +2,7 @@
 
 Last reviewed: YYYY-MM-DD
 
-[Contents](README.md) | Prev: TBD | Next: TBD
+[Contents](README.md) | [Prev](XX-prev-chapter.md) | [Next](XX-next-chapter.md)
 
 ## Summary
 
@@ -34,4 +34,4 @@ Describe the common mistakes, misconceptions, and failure modes. For each pitfal
 - Source description. https://example.com
 
 ---
-[Contents](README.md) | Prev: TBD | Next: TBD
+[Contents](README.md) | [Prev](XX-prev-chapter.md) | [Next](XX-next-chapter.md)

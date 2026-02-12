@@ -93,7 +93,7 @@ Practical defenses for model provenance:
 
 The ML ecosystem relies heavily on Python packages, many of which are young, maintained by small teams, and published to PyPI without the audit processes that more mature ecosystems have developed. Typosquatting (publishing a malicious package with a name similar to a popular one, such as `transformrs` instead of `transformers`) is a known vector on [PyPI](https://pypi.org/). Dependency confusion attacks, where a private package name collides with a public one, also apply.
 
-Beyond package-level attacks, ML pipelines often pull in large dependency trees. A single `pip install` of a popular ML framework can bring in hundreds of transitive dependencies. Each dependency is a potential point of compromise. The [CrowdStrike-reported vulnerability in Langflow](https://www.crowdstrike.com/en-us/blog/langflow-vulnerability-cve-2025-3248-exploited-in-the-wild/) in 2025, where an unauthenticated code injection flaw ([CVE-2025-3248](https://nvd.nist.gov/vuln/detail/CVE-2025-3248)) was exploited to deploy malware, illustrates how a single compromised component in an AI toolchain can cascade into a full system compromise.
+Beyond package-level attacks, ML pipelines often pull in large dependency trees. A single `pip install` of a popular ML framework can bring in hundreds of transitive dependencies. Each dependency is a potential point of compromise. In 2025, an unauthenticated code injection flaw in Langflow ([CVE-2025-3248](https://nvd.nist.gov/vuln/detail/CVE-2025-3248)) was added to [CISA's Known Exploited Vulnerabilities catalog](https://www.cisa.gov/known-exploited-vulnerabilities-catalog) after being exploited in the wild to deploy malware, illustrating how a single compromised component in an AI toolchain can cascade into a full system compromise.
 
 Mitigations mirror software supply chain security best practices: use lock files, run dependency scanners (such as [`pip-audit`](https://github.com/pypa/pip-audit) or [Snyk](https://snyk.io/)), prefer well-maintained packages with active security response teams, and audit your dependency tree periodically.
 
@@ -114,7 +114,7 @@ Data poisoning attacks insert malicious samples into training or fine-tuning dat
 
 Backdoor attacks are a particularly insidious form of poisoning. The model behaves normally on clean inputs but exhibits attacker-chosen behavior when a specific trigger is present. Anthropic's ["Sleeper Agents"](https://arxiv.org/abs/2401.05566) research demonstrated that standard safety training techniques, including supervised fine-tuning, reinforcement learning from human feedback, and adversarial training, failed to remove implanted backdoor behavior. In some cases, adversarial training made the model better at hiding the backdoor rather than eliminating it.
 
-Poisoning can target every stage of the pipeline: pre-training corpora scraped from the web, fine-tuning datasets curated by teams or sourced from vendors, documents ingested into RAG knowledge bases, and even tool descriptions in agentic systems. In January 2025, researchers documented how hidden prompts in code comments on GitHub repositories poisoned a fine-tuned model, creating a backdoor that activated months later.
+Poisoning can target every stage of the pipeline: pre-training corpora scraped from the web, fine-tuning datasets curated by teams or sourced from vendors, documents ingested into RAG knowledge bases, and even tool descriptions in agentic systems. Researchers have demonstrated that hidden prompts embedded in code comments, documentation, or web content can poison fine-tuned models and create backdoors that activate only when specific triggers are present.
 
 Defenses against data poisoning:
 
@@ -198,7 +198,7 @@ The most dangerous attacks against agents exploit the multi-step nature of the a
 
 Consider a scenario: an attacker poisons a document in the knowledge base with an instruction that causes the agent to write a specific value to a configuration file. On a subsequent invocation, the agent reads that configuration file as context, encounters the planted value, and interprets it as an instruction to send data to an external endpoint. Neither step looks obviously malicious in isolation. The attack is distributed across time and across data sources.
 
-In multi-agent systems, the risk compounds. A compromised agent can influence other agents through shared memory, message passing, or shared tool access. In Q2 2025, a manufacturing company lost $3.2 million when attackers compromised a vendor-validation agent, which then cascaded fraudulent approvals through a chain of downstream agents.
+In multi-agent systems, the risk compounds. A compromised agent can influence other agents through shared memory, message passing, or shared tool access. As multi-agent deployments grow, the risk of cascading compromise --- where one manipulated agent poisons the decisions of downstream agents through shared state or message passing --- becomes a primary architectural concern.
 
 ### Agent Security Principles
 
@@ -257,7 +257,7 @@ This section covers threat categories that are actively evolving. Some are well-
 
 As LLMs gain the ability to process images, audio, video, and other modalities alongside text, the injection attack surface expands beyond text. Multi-modal injection embeds malicious instructions in non-text inputs that the model processes.
 
-**Image-based injection** is the most mature variant. Attackers embed instructions as text rendered within images (visible or near-invisible), in image metadata, or as steganographic content that influences the model's interpretation without being apparent to human viewers. Research presented at [ICML 2025](https://icml.cc/) demonstrated transfer-based attacks on multimodal models achieving up to 84.8 percent success rates against GPT-4o for image captioning tasks. The [OWASP LLM01:2025](https://genai.owasp.org/llmrisk/llm01-prompt-injection/) guidance specifically expanded to cover multimodal injection vectors.
+**Image-based injection** is the most mature variant. Attackers embed instructions as text rendered within images (visible or near-invisible), in image metadata, or as steganographic content that influences the model's interpretation without being apparent to human viewers. A [2025 survey on multimodal prompt injection](https://arxiv.org/abs/2509.05883) documented transfer-based attacks on multimodal models achieving high success rates against production models for tasks like image captioning. The [OWASP LLM01:2025](https://genai.owasp.org/llmrisk/llm01-prompt-injection/) guidance specifically expanded to cover multimodal injection vectors.
 
 **Audio-based injection** embeds instructions in audio files processed by speech-to-text models or multimodal models that accept audio input. Proof-of-concept attacks have demonstrated adversarial audio that is imperceptible to humans but interpreted as commands by the model.
 
@@ -370,9 +370,9 @@ Conduct a blameless post-incident review focused on systemic improvements. What 
 - Rapid7. "From .pth to p0wned: Abuse of Pickle Files in AI Model Supply Chains." 2025. https://www.rapid7.com/blog/post/from-pth-to-p0wned-abuse-of-pickle-files-in-ai-model-supply-chains/
 - JFrog. "Unveiling 3 Zero-Day Vulnerabilities in PickleScan." June 2025. https://jfrog.com/blog/unveiling-3-zero-day-vulnerabilities-in-picklescan/
 - Australian Cyber Security Centre. "AI and ML: Supply Chain Risks and Mitigations." https://www.cyber.gov.au/business-government/secure-design/artificial-intelligence/artificial-intelligence-and-machine-learning-supply-chain-risks-and-mitigations
-- Anthropic, UK AISI, and Alan Turing Institute. Data poisoning with approximately 250 documents. 2025.
+- Anthropic, UK AISI, and Alan Turing Institute. Data poisoning research demonstrating backdoors with approximately 250 documents. 2025. https://www.anthropic.com/research
 - CyLab, Carnegie Mellon University. "Poisoned Datasets Put AI Models at Risk for Attack." June 2025. https://www.cylab.cmu.edu/news/2025/06/11-poisoned-datasets-put-ai-models-at-risk-for-attack.html
-- Anthropic. "Sleeper Agents: Training Deceptive LLMs That Persist Through Safety Training." 2024.
+- Anthropic. "Sleeper Agents: Training Deceptive LLMs That Persist Through Safety Training." 2024. https://arxiv.org/abs/2401.05566
 
 ### Agent Security
 - "Technical Breakdown: How AI Agents Ignore 40 Years of Security Progress." YouTube. https://www.youtube.com/watch?v=_3okhTwa7w4
@@ -386,7 +386,7 @@ Conduct a blameless post-incident review focused on systemic improvements. What 
 - "Privacy Auditing of Large Language Models." March 2025. https://arxiv.org/html/2503.06808
 
 ### Multimodal and Adversarial Attacks
-- "Multimodal Prompt Injection Attacks: Risks and Defenses for Modern LLMs." 2025. https://arxiv.org/html/2509.05883v1
+- "Multimodal Prompt Injection Attacks: Risks and Defenses for Modern LLMs." 2025. https://arxiv.org/abs/2509.05883
 - "Mind Mapping Prompt Injection: Visual Prompt Injection Attacks in Modern LLMs." Electronics, 2025. https://www.mdpi.com/2079-9292/14/10/1907
 - OWASP LLM01:2025 — Prompt Injection. https://genai.owasp.org/llmrisk/llm01-prompt-injection/
 

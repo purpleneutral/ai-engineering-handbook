@@ -108,12 +108,12 @@ Good for: simple local dev and production-ready vector search.
 Good for: local dev and small deployments.
 
 - Docker: `docker run -v ./chroma-data:/data -p 8000:8000 chromadb/chroma`
-- Docs: https://docs.trychroma.com/production/containers/docker
+- Docs: https://docs.trychroma.com/docs/overview/getting-started
 
 ### Weaviate (Medium)
 Good for: feature-rich vector DB; typically configured via Docker Compose.
 
-- Docs: https://docs.weaviate.io/weaviate/installation/docker-compose
+- Docs: https://weaviate.io/developers/weaviate/installation/docker-compose
 
 ### Milvus (Hard)
 Good for: large-scale vector search; heavier operational footprint.

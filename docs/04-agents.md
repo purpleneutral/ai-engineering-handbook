@@ -9,6 +9,7 @@ An "agent" is an LLM-driven loop that can plan, call tools, observe results, and
 
 ## See Also
 - [Structured Outputs And Tool Calling](11-structured-outputs-and-tool-calling.md)
+- [Model Context Protocol (MCP)](18-model-context-protocol.md) — the open standard for connecting agents to external tools and data sources.
 - [Safety, Privacy, And Security](06-safety-privacy-security.md)
 - [Ops: Shipping And Running LLM Systems](08-ops.md)
 

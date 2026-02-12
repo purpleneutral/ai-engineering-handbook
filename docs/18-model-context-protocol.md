@@ -144,7 +144,7 @@ The November 2025 spec added enterprise-managed authorization, allowing organiza
 
 ### Real-World Threats
 
-The threat model for MCP servers is not theoretical. In September 2025, an unofficial [Postmark](https://postmarkapp.com/) MCP server with 1,500 weekly downloads was modified to silently BCC all outgoing emails to an attacker's address by embedding a hidden instruction in a tool description. This is a supply-chain attack that exploits the fact that tool descriptions are injected into the LLM's context and can contain adversarial instructions.
+The threat model for MCP servers is not theoretical. In September 2025, an unofficial [Postmark](https://postmarkapp.com/) MCP server was found to contain a backdoor that silently added a BCC recipient to all outgoing emails. The incident demonstrated that community MCP servers --- which run with the permissions of the host process and whose tool descriptions are injected into the LLM's context --- are a supply-chain attack surface. Whether the vector is malicious code in the server implementation or adversarial instructions hidden in tool descriptions, the result is the same: the user's AI assistant takes actions the user did not intend.
 
 Prompt injection through tool descriptions, resource content, or server responses is a first-class concern. An MCP server that returns untrusted content (web pages, user-generated data, third-party API responses) can inject instructions into the LLM's context. All the defenses described in the Safety, Privacy, and Security chapter apply here, with the additional wrinkle that the attack surface scales with the number of connected servers.
 
@@ -265,7 +265,7 @@ As of 2025-12-09, [Anthropic donated MCP](https://www.anthropic.com/news/donatin
 
 MCP has gone through three specification releases:
 
-- **[2024-11-25](https://modelcontextprotocol.io/specification/2024-11-05) (initial release).** The first public specification, establishing the core architecture, primitives, and transport mechanisms.
+- **[2024-11-05](https://modelcontextprotocol.io/specification/2024-11-05) (initial release).** The first public specification, establishing the core architecture, primitives, and transport mechanisms.
 - **[2025-06-18](https://modelcontextprotocol.io/specification/2025-06-18).** Added structured tool outputs (`outputSchema`), elicitation for server-initiated user interactions, [OAuth 2.1](https://oauth.net/2.1/) authorization with [Resource Indicators (RFC 8707)](https://datatracker.ietf.org/doc/html/rfc8707), and Streamable HTTP transport replacing legacy HTTP+SSE.
 - **[2025-11-25](https://modelcontextprotocol.io/specification/2025-11-25).** Added the Tasks primitive for asynchronous operations (call-now, fetch-later), sampling with tool support for server-side agent loops, URL-mode elicitation for secure credential collection in browsers, standardized OAuth scope names, and a formal extension mechanism.
 

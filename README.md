@@ -102,9 +102,9 @@ The following is a curated index of tools, frameworks, and services commonly use
 |------|--------------|------------|------|
 | Postgres + pgvector | `docker pull pgvector/pgvector:pg18` | Medium | [GitHub](https://github.com/pgvector/pgvector) |
 | Qdrant | `docker run -p 6333:6333 qdrant/qdrant` | Easy | [Quick start](https://qdrant.tech/documentation/quick-start/) |
-| Weaviate | Docker Compose (see docs) | Medium | [Docs](https://docs.weaviate.io/weaviate/installation/docker-compose) |
+| Weaviate | Docker Compose (see docs) | Medium | [Docs](https://weaviate.io/developers/weaviate/installation/docker-compose) |
 | Milvus | Docker Compose (see docs) | Hard | [Docs](https://milvus.io/docs/install_standalone-docker.md/) |
-| Chroma | `docker run -v ./chroma-data:/data -p 8000:8000 chromadb/chroma` | Easy | [Docs](https://docs.trychroma.com/production/containers/docker) |
+| Chroma | `docker run -v ./chroma-data:/data -p 8000:8000 chromadb/chroma` | Easy | [Docs](https://docs.trychroma.com/docs/overview/getting-started) |
 | Pinecone (managed) | `pip install pinecone` | Easy | [Quick start](https://docs.pinecone.io/guides/getting-started/quickstart) |
 
 ### Local Models and Serving
@@ -156,7 +156,7 @@ The following is a curated index of tools, frameworks, and services commonly use
 | Resource | Description | Link |
 |----------|-------------|------|
 | Model Context Protocol | Standard for tool/context integration | [Docs](https://modelcontextprotocol.io/) |
-| MCP Specification | Stable protocol spec | [Spec](https://modelcontextprotocol.io/specification/2024-11-05/index) |
+| MCP Specification | Stable protocol spec (November 2025) | [Spec](https://modelcontextprotocol.io/specification/2025-11-25) |
 | OpenAI Docs MCP Server | Developer docs accessible in-editor via MCP | [Docs](https://platform.openai.com/docs/docs-mcp) |
 
 ## Contributing
@@ -165,7 +165,7 @@ This handbook grows with community input. There are several ways to get involved
 
 **Suggest a topic.** Open a [GitHub Issue](../../issues/new?template=topic-request.md&labels=topic-request&title=%5BTopic+Request%5D+) describing what you'd like covered and why it matters. Topic requests help prioritize what gets written next.
 
-**Report an error or stale information.** If something is wrong, outdated, or misleading, [open an issue](../../issues/new?labels=correction). Include a link to the relevant section and, ideally, a primary source with the correct information.
+**Report an error or stale information.** If something is wrong, outdated, or misleading, [open an issue](../../issues/new?template=correction.md&labels=correction&title=%5BCorrection%5D+). Include a link to the relevant section and, ideally, a primary source with the correct information.
 
 **Contribute directly.** See [CONTRIBUTING.md](CONTRIBUTING.md) for editorial guidelines, style conventions, and the suggested workflow for pull requests.
 

@@ -1,4 +1,4 @@
-# Fine-Tuning and Model Customization
+# Fine-Tuning And Model Customization
 
 Last reviewed: 2026-02-10
 
@@ -44,6 +44,10 @@ The training process takes the pre-trained model and performs additional gradien
 Critically, fine-tuning does **not** add new factual knowledge reliably. The model's weights encode statistical patterns, not a searchable database. Training on documents containing the fact "our headquarters is in Portland" might make the model more likely to mention Portland in some contexts, but it will not create a reliable lookup. The model may still hallucinate a different city if the prompt context pushes it in another direction. For factual grounding, retrieval is the reliable path.
 
 The base model's general capabilities are preserved during fine-tuning, though they can degrade if the training data is too narrow or the training runs too long. This is the overfitting trade-off: the more you specialize the model, the more you risk degrading its performance on tasks outside your training distribution.
+
+### Parameter-Efficient Fine-Tuning (LoRA and QLoRA)
+
+Full fine-tuning updates every weight in the model, which requires as much memory as the original training process. For large models, this is impractical without significant GPU resources. [LoRA](https://arxiv.org/abs/2106.09685) (Low-Rank Adaptation) solves this by freezing the pre-trained weights and injecting small, trainable low-rank matrices into each transformer layer. This can reduce the number of trainable parameters by 10,000x while achieving comparable quality to full fine-tuning. [QLoRA](https://arxiv.org/abs/2305.14314) goes further by applying LoRA to a 4-bit quantized base model, enabling fine-tuning of a 65B-parameter model on a single 48GB GPU. If you are fine-tuning open-weight models locally, LoRA or QLoRA is almost certainly what you will use. Hosted fine-tuning services (OpenAI, Google) handle this complexity behind the API.
 
 ## Data Requirements
 
@@ -166,9 +170,9 @@ Before committing to fine-tuning, consider whether a simpler approach solves you
 
 ## References
 - OpenAI docs: Fine-tuning. https://platform.openai.com/docs/guides/fine-tuning
-- Anthropic docs: Fine-tuning. https://docs.anthropic.com/en/docs/build-with-claude/fine-tuning
-- LoRA paper (efficient fine-tuning). https://arxiv.org/abs/2106.09685
-- QLoRA paper (quantized fine-tuning). https://arxiv.org/abs/2305.14314
+- Google Cloud: Tuning Gemini models. https://ai.google.dev/gemini-api/docs/model-tuning
+- LoRA paper: "LoRA: Low-Rank Adaptation of Large Language Models" (Hu et al., 2021). https://arxiv.org/abs/2106.09685
+- QLoRA paper: "QLoRA: Efficient Finetuning of Quantized LLMs" (Dettmers et al., 2023). https://arxiv.org/abs/2305.14314
 
 ---
 [Contents](README.md) | [Prev](12-embeddings-and-vector-search.md) | [Next](03-rag.md)

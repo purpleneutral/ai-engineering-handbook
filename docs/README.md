@@ -26,7 +26,7 @@ The building blocks that every LLM-powered system relies on. These chapters cove
 5. [Prompting](02-prompting.md) — Prompt engineering as interface design: anatomy of a prompt, practical patterns, few-shot examples, chain-of-thought reasoning, and the pitfalls that break prompts in production.
 6. [Structured Outputs and Tool Calling](11-structured-outputs-and-tool-calling.md) — Turning free-form text into validated data and controlled actions: schema-constrained outputs, function calling, validation loops, and tool safety.
 7. [Embeddings and Vector Search](12-embeddings-and-vector-search.md) — How embedding models represent meaning as vectors, how similarity search works, and practical design choices for chunking, indexing, and retrieval.
-8. [Fine-Tuning and Model Customization](17-fine-tuning.md) — When and how to adapt a pre-trained model to your task or domain: the decision framework, data requirements, the training workflow, and the pitfalls that make fine-tuning fail.
+8. [Fine-Tuning And Model Customization](17-fine-tuning.md) — When and how to adapt a pre-trained model to your task or domain: the decision framework, data requirements, the training workflow, and the pitfalls that make fine-tuning fail.
 
 ### Part II: System Patterns
 

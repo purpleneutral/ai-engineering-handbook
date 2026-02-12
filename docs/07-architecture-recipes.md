@@ -10,6 +10,7 @@ These are common AI feature shapes and the pieces that usually matter for correc
 ## See Also
 - [Stacks And Difficulty](16-stacks-and-difficulty.md)
 - [Structured Outputs And Tool Calling](11-structured-outputs-and-tool-calling.md)
+- [Model Context Protocol (MCP)](18-model-context-protocol.md) — standardized tool integration for agent and multi-tool architectures.
 - [Retrieval-Augmented Generation (RAG)](03-rag.md)
 - [Agents](04-agents.md)
 
