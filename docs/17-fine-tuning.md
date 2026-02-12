@@ -172,5 +172,7 @@ Before committing to fine-tuning, consider whether a simpler approach solves you
 - LoRA paper: "LoRA: Low-Rank Adaptation of Large Language Models" (Hu et al., 2021). https://arxiv.org/abs/2106.09685
 - QLoRA paper: "QLoRA: Efficient Finetuning of Quantized LLMs" (Dettmers et al., 2023). https://arxiv.org/abs/2305.14314
 
+*Last audited: 2026-02-10 · [Audit methodology](23-audit-methodology.md)*
+
 ---
 [Contents](README.md) | [Prev](12-embeddings-and-vector-search.md) | [Next](03-rag.md)

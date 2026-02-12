@@ -356,5 +356,7 @@ For production multimodal systems, build evaluation around your actual use cases
 - FAISS. https://github.com/facebookresearch/faiss
 - ColPali implementation. https://github.com/illuin-tech/colpali
 
+*Last audited: 2026-02-10 · [Audit methodology](23-audit-methodology.md)*
+
 ---
 [Contents](README.md) | [Prev](13-staying-current.md) | [Next](21-cost-engineering.md)

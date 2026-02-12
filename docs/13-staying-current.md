@@ -128,5 +128,7 @@ Conversations with peers who are building similar systems provide practical insi
 - [Import AI (newsletter archive)](https://importai.substack.com/)
 - [Papers with Code (benchmarks + papers)](https://paperswithcode.com/about)
 
+*Last audited: 2026-02-10 · [Audit methodology](23-audit-methodology.md)*
+
 ---
 [Contents](README.md) | [Prev](14-governance-and-risk.md) | [Next](20-multimodal.md)

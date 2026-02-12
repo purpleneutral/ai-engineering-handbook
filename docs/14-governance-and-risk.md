@@ -117,5 +117,7 @@ Risk priority is determined by the combination of all three: high-likelihood, hi
 - [OpenAI "Your data" guide (data handling controls)](https://platform.openai.com/docs/guides/your-data)
 - [Model Cards for Model Reporting (Mitchell et al., 2019)](https://arxiv.org/abs/1810.03993)
 
+*Last audited: 2026-02-10 · [Audit methodology](23-audit-methodology.md)*
+
 ---
 [Contents](README.md) | [Prev](08-ops.md) | [Next](13-staying-current.md)

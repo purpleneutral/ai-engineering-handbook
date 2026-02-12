@@ -33,5 +33,7 @@ Describe the common mistakes, misconceptions, and failure modes. For each pitfal
 
 - Source description. https://example.com
 
+*Last audited: YYYY-MM-DD · [Audit methodology](23-audit-methodology.md)*
+
 ---
 [Contents](README.md) | [Prev](XX-prev-chapter.md) | [Next](XX-next-chapter.md)

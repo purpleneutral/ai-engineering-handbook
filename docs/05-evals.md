@@ -149,5 +149,7 @@ Connect production monitoring back to your eval pipeline. When production monito
 - OpenAI Evals (framework). https://github.com/openai/evals
 - Promptfoo (prompt testing). https://github.com/promptfoo/promptfoo
 
+*Last audited: 2026-02-10 · [Audit methodology](23-audit-methodology.md)*
+
 ---
 [Contents](README.md) | [Prev](18-model-context-protocol.md) | [Next](06-safety-privacy-security.md)

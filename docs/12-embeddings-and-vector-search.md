@@ -153,5 +153,7 @@ Retrieval quality must be measured, not assumed. There are two levels of evaluat
 - Sentence-BERT paper (strong baseline for embeddings). https://arxiv.org/abs/1908.10084
 - pgvector (Postgres vector extension). https://github.com/pgvector/pgvector
 
+*Last audited: 2026-02-10 · [Audit methodology](23-audit-methodology.md)*
+
 ---
 [Contents](README.md) | [Prev](11-structured-outputs-and-tool-calling.md) | [Next](17-fine-tuning.md)

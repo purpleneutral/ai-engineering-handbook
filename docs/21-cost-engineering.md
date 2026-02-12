@@ -375,5 +375,7 @@ These dashboards show what you spent but not *why*. For attribution (which featu
 - LiteLLM (proxy + cost tracking). https://github.com/BerriAI/litellm
 - OpenLLMetry (OTel for LLMs). https://github.com/traceloop/openllmetry
 
+*Last audited: 2026-02-10 · [Audit methodology](23-audit-methodology.md)*
+
 ---
 [Contents](README.md) | [Prev](20-multimodal.md) | [Next](22-guardrails-and-moderation.md)

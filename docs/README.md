@@ -60,6 +60,7 @@ Deeper dives into specific capabilities and domains that are increasingly import
 - [Glossary](09-glossary.md) — Definitions for key terms used throughout this book.
 - [Reading List (Curated)](10-reading-list.md) — Annotated list of foundational papers, primary documentation, and high-signal information sources.
 - [A Brief History of AI and LLMs](19-history-of-ai.md) — From the 1943 McCulloch-Pitts neuron to today's reasoning models: the key milestones, breakthroughs, and winters that shaped the current landscape.
+- [Audit Methodology](23-audit-methodology.md) — How factual claims, links, and code examples are verified: scope, severity classification, and limitations.
 
 ## Adding New Pages
 

@@ -236,5 +236,7 @@ The validation-retry pattern is the backbone of reliable structured output syste
 - OWASP Top 10 for LLM Applications (insecure output handling, excessive agency, etc.). https://owasp.org/www-project-top-10-for-large-language-model-applications/
 - JSON Schema specification. https://json-schema.org/specification
 
+*Last audited: 2026-02-10 · [Audit methodology](23-audit-methodology.md)*
+
 ---
 [Contents](README.md) | [Prev](02-prompting.md) | [Next](12-embeddings-and-vector-search.md)

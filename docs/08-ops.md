@@ -159,5 +159,7 @@ After every incident, add one or more test cases to your eval suite that specifi
 - [OpenAI docs: Prompt caching](https://platform.openai.com/docs/guides/prompt-caching)
 - [OpenTelemetry](https://opentelemetry.io/)
 
+*Last audited: 2026-02-10 · [Audit methodology](23-audit-methodology.md)*
+
 ---
 [Contents](README.md) | [Prev](07-architecture-recipes.md) | [Next](14-governance-and-risk.md)

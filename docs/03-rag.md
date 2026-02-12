@@ -160,5 +160,7 @@ Run retrieval evals and end-to-end evals separately. When end-to-end quality dro
 - Reciprocal Rank Fusion (Cormack et al., 2009). https://plg.uwaterloo.ca/~gvcormac/cormack_sigir09.pdf
 - RAGAS evaluation framework. https://docs.ragas.io/
 
+*Last audited: 2026-02-10 · [Audit methodology](23-audit-methodology.md)*
+
 ---
 [Contents](README.md) | [Prev](17-fine-tuning.md) | [Next](04-agents.md)

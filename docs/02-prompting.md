@@ -200,5 +200,7 @@ print(response.choices[0].message.content)
 - Anthropic docs: Prompt engineering. https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview
 - Chain-of-thought prompting (NeurIPS 2022). https://proceedings.neurips.cc/paper_files/paper/2022/hash/9d5609613524ecf4f15af0f7b31abca4-Abstract-Conference.html
 
+*Last audited: 2026-02-10 · [Audit methodology](23-audit-methodology.md)*
+
 ---
 [Contents](README.md) | [Prev](01-llm-fundamentals.md) | [Next](11-structured-outputs-and-tool-calling.md)

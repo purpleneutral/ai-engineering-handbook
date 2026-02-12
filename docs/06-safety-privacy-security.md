@@ -390,5 +390,7 @@ Conduct a blameless post-incident review focused on systemic improvements. What 
 - "Mind Mapping Prompt Injection: Visual Prompt Injection Attacks in Modern LLMs." Electronics, 2025. https://www.mdpi.com/2079-9292/14/10/1907
 - OWASP LLM01:2025 — Prompt Injection. https://genai.owasp.org/llmrisk/llm01-prompt-injection/
 
+*Last audited: 2026-02-10 · [Audit methodology](23-audit-methodology.md)*
+
 ---
 [Contents](README.md) | [Prev](05-evals.md) | [Next](07-architecture-recipes.md)

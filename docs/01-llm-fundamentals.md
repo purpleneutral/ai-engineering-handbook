@@ -156,5 +156,7 @@ One of the most significant findings from [DeepSeek-R1](https://arxiv.org/abs/25
 - Scaling Laws for Neural Language Models (Kaplan et al., 2020). https://arxiv.org/abs/2001.08361
 - Sparsely-Gated Mixture-of-Experts (Shazeer et al., 2017). https://arxiv.org/abs/1701.06538
 
+*Last audited: 2026-02-10 · [Audit methodology](23-audit-methodology.md)*
+
 ---
 [Contents](README.md) | [Prev](15-installation-and-local-setup.md) | [Next](02-prompting.md)

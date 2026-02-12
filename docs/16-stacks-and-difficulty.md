@@ -137,5 +137,7 @@ Running your own models gives you control over data residency, latency, and per-
 - OWASP Top 10 for LLM Applications. https://owasp.org/www-project-top-10-for-large-language-model-applications/
 - NIST AI RMF 1.0. https://www.nist.gov/itl/ai-risk-management-framework
 
+*Last audited: 2026-02-10 · [Audit methodology](23-audit-methodology.md)*
+
 ---
 [Contents](README.md) | [Prev](00-scope-and-update-policy.md) | [Next](15-installation-and-local-setup.md)

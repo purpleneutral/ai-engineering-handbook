@@ -134,5 +134,7 @@ Good for: standard tracing across your services; GenAI semantics are evolving.
 
 - GenAI semantic conventions: https://opentelemetry.io/docs/specs/semconv/gen-ai/
 
+*Last audited: 2026-02-10 · [Audit methodology](23-audit-methodology.md)*
+
 ---
 [Contents](README.md) | [Prev](16-stacks-and-difficulty.md) | [Next](01-llm-fundamentals.md)

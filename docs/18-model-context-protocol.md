@@ -319,5 +319,7 @@ The protocol continues to evolve. Areas under active development include server 
 - Understanding MCP security risks and controls (Red Hat). https://www.redhat.com/en/blog/model-context-protocol-mcp-understanding-security-risks-and-controls
 - Code execution with MCP (Anthropic engineering blog). https://www.anthropic.com/engineering/code-execution-with-mcp
 
+*Last audited: 2026-02-10 · [Audit methodology](23-audit-methodology.md)*
+
 ---
 [Contents](README.md) | [Prev](04-agents.md) | [Next](05-evals.md)

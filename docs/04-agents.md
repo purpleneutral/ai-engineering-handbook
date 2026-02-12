@@ -148,5 +148,7 @@ Log every tool call, its parameters, and its result. These logs are essential fo
 - Anthropic docs: Tool use. https://docs.anthropic.com/en/docs/build-with-claude/tool-use
 - OWASP Top 10 for LLM Applications (excessive agency, etc.). https://owasp.org/www-project-top-10-for-large-language-model-applications/
 
+*Last audited: 2026-02-10 · [Audit methodology](23-audit-methodology.md)*
+
 ---
 [Contents](README.md) | [Prev](03-rag.md) | [Next](18-model-context-protocol.md)

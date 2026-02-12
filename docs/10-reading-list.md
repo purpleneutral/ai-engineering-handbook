@@ -76,5 +76,7 @@ These papers and reports cover important developments since the foundational wor
 - **[Anthropic: Claude's constitution](https://www.anthropic.com/news/claude-new-constitution).** Anthropic's public description of the principles and values that guide Claude's behavior, released under Creative Commons CC0. A practical example of how Constitutional AI is applied to a production model.
 - **[Model Context Protocol (MCP) specification](https://modelcontextprotocol.io/specification/2025-11-25).** The open specification for connecting LLM applications with external tools and data sources. As of 2026-02-11, MCP is governed by the Agentic AI Foundation under the Linux Foundation and supported by Anthropic, OpenAI, Google, and Microsoft.
 
+*Last audited: 2026-02-10 · [Audit methodology](23-audit-methodology.md)*
+
 ---
 [Contents](README.md) | [Prev](09-glossary.md) | [Next](19-history-of-ai.md)

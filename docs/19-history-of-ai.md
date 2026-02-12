@@ -199,5 +199,7 @@ Several patterns recur throughout AI's history, and they are worth keeping in mi
 - History of artificial intelligence (Wikipedia, comprehensive timeline). https://en.wikipedia.org/wiki/History_of_artificial_intelligence
 - AI winter (Wikipedia, funding cycles). https://en.wikipedia.org/wiki/AI_winter
 
+*Last audited: 2026-02-10 · [Audit methodology](23-audit-methodology.md)*
+
 ---
 [Contents](README.md) | [Prev](10-reading-list.md) | [Next](README.md)

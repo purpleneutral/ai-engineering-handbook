@@ -47,5 +47,7 @@ A reference that silently goes stale is worse than no reference at all, because 
 
 Every page in this collection follows a consistent structure so that readers can quickly orient themselves regardless of which topic they land on. When adding a new topic, start from `docs/_template.md`. The template includes the standard sections -- Summary, See Also, the main content area, a Checklist, and References -- along with the navigation links that tie the pages together. Consistency matters more than it might seem: when every page has the same bones, readers spend less time figuring out where to look and more time absorbing the material.
 
+*Last audited: 2026-02-10 · [Audit methodology](23-audit-methodology.md)*
+
 ---
 [Contents](README.md) | [Prev](README.md) | [Next](16-stacks-and-difficulty.md)

@@ -152,5 +152,7 @@ Design for observability across the full pipeline. When a user reports a problem
 - [OpenAI docs: Production best practices](https://platform.openai.com/docs/guides/production-best-practices)
 - [OpenAI docs: Safety best practices](https://platform.openai.com/docs/guides/safety-best-practices)
 
+*Last audited: 2026-02-10 · [Audit methodology](23-audit-methodology.md)*
+
 ---
 [Contents](README.md) | [Prev](06-safety-privacy-security.md) | [Next](08-ops.md)
