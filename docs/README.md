@@ -52,6 +52,8 @@ Building a working prototype is the easy part. These chapters cover what it take
 Deeper dives into specific capabilities and domains that are increasingly important for production AI systems.
 
 18. [Multimodal AI](20-multimodal.md) — Working with images, audio, video, and documents: provider capabilities, token economics, multimodal RAG, document processing, and visual prompt injection defenses.
+19. [Cost Engineering And Optimization](21-cost-engineering.md) — Token pricing models, prompt caching strategies, batching, model tiering and routing, self-host vs. API economics, and cost monitoring.
+20. [Guardrails And Content Moderation](22-guardrails-and-moderation.md) — Moderation APIs, guardrail frameworks (NeMo, Guardrails AI, LLM Guard), PII detection pipelines, input and output validation, and policy enforcement architecture.
 
 ### Appendices
 

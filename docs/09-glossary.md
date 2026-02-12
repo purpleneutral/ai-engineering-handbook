@@ -2,7 +2,7 @@
 
 Last reviewed: 2026-02-10
 
-[Contents](README.md) | [Prev](20-multimodal.md) | [Next](10-reading-list.md)
+[Contents](README.md) | [Prev](22-guardrails-and-moderation.md) | [Next](10-reading-list.md)
 
 This glossary defines key terms used throughout this book. Terms are listed alphabetically. Where a term is covered in depth in a specific chapter, the chapter is linked.
 
@@ -173,4 +173,4 @@ This glossary defines key terms used throughout this book. Terms are listed alph
 **Zero-Shot** — Prompting a model to perform a task without providing any examples, relying solely on instructions and the model's pre-trained knowledge. Contrast with few-shot prompting. See [Prompting](02-prompting.md).
 
 ---
-[Contents](README.md) | [Prev](20-multimodal.md) | [Next](10-reading-list.md)
+[Contents](README.md) | [Prev](22-guardrails-and-moderation.md) | [Next](10-reading-list.md)

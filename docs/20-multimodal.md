@@ -2,7 +2,7 @@
 
 Last reviewed: 2026-02-10
 
-[Contents](README.md) | [Prev](13-staying-current.md) | [Next](09-glossary.md)
+[Contents](README.md) | [Prev](13-staying-current.md) | [Next](21-cost-engineering.md)
 
 ## Summary
 
@@ -357,4 +357,4 @@ For production multimodal systems, build evaluation around your actual use cases
 - ColPali implementation. https://github.com/illuin-tech/colpali
 
 ---
-[Contents](README.md) | [Prev](13-staying-current.md) | [Next](09-glossary.md)
+[Contents](README.md) | [Prev](13-staying-current.md) | [Next](21-cost-engineering.md)
