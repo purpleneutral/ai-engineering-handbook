@@ -9,9 +9,9 @@ Last reviewed: 2026-02-10
 The [Model Context Protocol (MCP)](https://modelcontextprotocol.io/specification/2025-11-25) is an open standard for connecting LLM-powered applications to external tools, data sources, and services through a single, consistent interface. Before MCP, every integration between an AI application and an external system required a bespoke connector, creating an N-times-M problem: N applications times M integrations, each built and maintained separately. MCP collapses this to N-plus-M by defining a universal protocol that any client can use to talk to any server. If you are building agent systems that need to interact with databases, APIs, file systems, or third-party services, MCP is the emerging standard for how that wiring works.
 
 ## See Also
-- [Structured Outputs and Tool Calling](11-structured-outputs-and-tool-calling.md) — how LLMs invoke tools in general; MCP standardizes the discovery and transport layer for those tools.
+- [Structured Outputs And Tool Calling](11-structured-outputs-and-tool-calling.md) — how LLMs invoke tools in general; MCP standardizes the discovery and transport layer for those tools.
 - [Agents](04-agents.md) — MCP servers are the primary way agents discover and interact with external capabilities.
-- [Safety, Privacy, and Security](06-safety-privacy-security.md) — MCP introduces new trust boundaries that need careful attention.
+- [Safety, Privacy, And Security](06-safety-privacy-security.md) — MCP introduces new trust boundaries that need careful attention.
 - [Architecture Recipes](07-architecture-recipes.md) — concrete patterns where MCP fits as a system component.
 
 ## The Problem MCP Solves
@@ -122,7 +122,7 @@ MCP is a stateful protocol. The connection persists across multiple request-resp
 
 For stdio transports, the client closes the server's stdin and waits for the process to exit, escalating to SIGTERM and then SIGKILL if necessary. For HTTP transports, the client simply closes the HTTP connection. No special shutdown message is defined at the protocol level.
 
-## Security Model and Trust Boundaries
+## Security Model And Trust Boundaries
 
 MCP introduces new trust boundaries into your system, and getting the security model wrong can have serious consequences. An MCP server that can execute shell commands or send emails is an attack surface, not just a convenience.
 
@@ -148,7 +148,7 @@ The threat model for MCP servers is not theoretical. In September 2025, an unoff
 
 Prompt injection through tool descriptions, resource content, or server responses is a first-class concern. An MCP server that returns untrusted content (web pages, user-generated data, third-party API responses) can inject instructions into the LLM's context. All the defenses described in the Safety, Privacy, and Security chapter apply here, with the additional wrinkle that the attack surface scales with the number of connected servers.
 
-## When to Use MCP vs. Direct Tool Calling
+## When To Use MCP vs. Direct Tool Calling
 
 MCP and direct tool calling (where tool definitions are embedded in the LLM API request) are complementary, not competing approaches. The decision depends on your system's scale, reusability needs, and operational model.
 

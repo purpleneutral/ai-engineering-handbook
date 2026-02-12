@@ -65,7 +65,7 @@ Here is a concrete example. Suppose you are extracting contact information from 
 
 Notice the deliberate choices: nullable fields for optional information (so the model returns `null` instead of hallucinating), an enum for a constrained field (so the model cannot invent roles), a pattern for phone numbers (to catch obvious hallucinations), and `additionalProperties: false` to prevent the model from adding unexpected fields.
 
-A runnable example using the [OpenAI SDK](https://platform.openai.com/docs/guides/structured-outputs) with [Pydantic](https://docs.pydantic.dev/) for structured outputs:
+A runnable example using the [OpenAI SDK](https://platform.openai.com/docs/guides/structured-outputs) with [Pydantic](https://docs.pydantic.dev/) for structured outputs. As of 2026-02-10, the `parse` method lives under the `beta` namespace and may graduate to a stable namespace; OpenAI also offers a newer [Responses API](https://platform.openai.com/docs/api-reference/responses) (`client.responses.parse()`) as the recommended interface for new projects, though the Chat Completions API remains fully supported:
 
 ```python
 from openai import OpenAI

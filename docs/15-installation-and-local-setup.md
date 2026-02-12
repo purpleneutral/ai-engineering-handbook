@@ -118,7 +118,7 @@ Good for: feature-rich vector DB; typically configured via Docker Compose.
 ### Milvus (Hard)
 Good for: large-scale vector search; heavier operational footprint.
 
-- Docs: https://milvus.io/docs/install_standalone-docker.md/
+- Docs: https://milvus.io/docs/install_standalone-docker.md
 
 ## Observability (Quick Start)
 

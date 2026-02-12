@@ -11,9 +11,9 @@ Fine-tuning adapts a pre-trained model to your specific task or domain by traini
 ## See Also
 - [LLM Fundamentals](01-llm-fundamentals.md)
 - [Prompting](02-prompting.md)
-- [Evals and Testing](05-evals.md)
+- [Evals And Testing](05-evals.md)
 
-## When to Fine-Tune (and When Not To)
+## When To Fine-Tune (And When Not To)
 
 The most important thing to understand about fine-tuning is that it should not be your first move. Start with prompting and few-shot examples. Measure how far that gets you. Fine-tune only when you have evidence that prompting alone cannot close the gap.
 
@@ -86,10 +86,8 @@ from openai import OpenAI
 client = OpenAI()
 
 # 1. Upload training data (JSONL format)
-training_file = client.files.create(
-    file=open("training_data.jsonl", "rb"),
-    purpose="fine-tune",
-)
+with open("training_data.jsonl", "rb") as f:
+    training_file = client.files.create(file=f, purpose="fine-tune")
 
 # 2. Start fine-tuning job
 job = client.fine_tuning.jobs.create(
@@ -136,7 +134,7 @@ Fine-tuning introduces operational complexity that prompting does not. Plan for 
 
 **Rollback.** Always maintain the ability to fall back to the base model with prompting. If your fine-tuned model degrades after a base model update, or if a bug is found in the training data, you need to be able to revert without downtime. This means keeping your prompt-based implementation alive as a fallback path, not deleting it after fine-tuning succeeds.
 
-## Alternatives to Fine-Tuning
+## Alternatives To Fine-Tuning
 
 Before committing to fine-tuning, consider whether a simpler approach solves your problem.
 

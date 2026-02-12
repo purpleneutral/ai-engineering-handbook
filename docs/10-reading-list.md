@@ -48,7 +48,7 @@ These papers define the core ideas that modern LLM engineering is built on. Read
 
 - **[OpenAI Evals](https://github.com/openai/evals).** OpenAI's open-source framework for evaluating LLM outputs. Provides a library of eval templates and a runner for custom evaluations.
 - **[promptfoo](https://github.com/promptfoo/promptfoo).** A developer-friendly tool for testing prompts across models and configurations. Supports assertions, comparisons, and CI integration.
-- **[Ragas](https://docs.ragas.io/en/stable/getstarted/install/).** A framework specifically designed for evaluating RAG pipelines, with metrics for faithfulness, answer relevancy, and context precision.
+- **[Ragas](https://docs.ragas.io/en/stable/).** A framework specifically designed for evaluating RAG pipelines, with metrics for faithfulness, answer relevancy, and context precision.
 
 ## Staying Current (High-Signal Sources)
 
