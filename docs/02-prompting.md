@@ -6,7 +6,7 @@ Last reviewed: 2026-02-10
 
 ## Summary
 
-Prompting is interface design: you are shaping the model's behavior through constraints, examples, and input hygiene. Just as a well-designed API guides callers toward correct usage and makes misuse difficult, a well-designed prompt guides the model toward the output you need and makes failure modes less likely. This chapter covers the anatomy of effective prompts, the key techniques (few-shot learning, chain-of-thought reasoning, system vs. user message roles), the sampling parameters that control output variability, and the pitfalls that cause prompts to fail in production.
+Prompting is interface design: you are shaping the model's behavior through constraints, examples, and input hygiene. Just as a well-designed form guides users toward correct input and makes mistakes difficult, a well-designed prompt guides the model toward the output you need and makes failure modes less likely. This chapter covers the anatomy of effective prompts, the key techniques (few-shot learning, chain-of-thought reasoning, system vs. user message roles), the sampling parameters that control output variability, and the pitfalls that cause prompts to fail in production.
 
 ## See Also
 - [Structured Outputs And Tool Calling](11-structured-outputs-and-tool-calling.md)

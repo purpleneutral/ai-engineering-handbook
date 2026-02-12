@@ -6,7 +6,7 @@ Last reviewed: 2026-02-10
 
 ## Summary
 
-Large language models are probabilistic text generators -- and increasingly multimodal systems that process images, audio, and code alongside natural language -- that can follow instructions with remarkable fluency. They are not, however, inherently truthful, consistent, or secure. Understanding why requires looking under the hood at how these models are built, what they optimize for, and where those design choices create predictable failure modes. This chapter covers the foundational concepts every engineer needs before building on top of LLMs: the transformer architecture, tokenization, the training pipeline, failure modes, and the reliability tactics that make production systems work.
+Large language models are probabilistic text generators -- and increasingly multimodal systems that process images, audio, and code alongside natural language -- that can follow instructions with remarkable fluency. They are not, however, inherently truthful, consistent, or secure. Understanding why requires looking under the hood at how these models are built, what they optimize for, and where those design choices create predictable failure modes. This chapter covers the foundational concepts you need before working with LLMs: the transformer architecture, tokenization, the training pipeline, failure modes, and the reliability tactics that make production systems work.
 
 ## See Also
 - [Prompting](02-prompting.md)
@@ -15,7 +15,7 @@ Large language models are probabilistic text generators -- and increasingly mult
 
 ## The Transformer Architecture
 
-Modern LLMs are built on the [transformer architecture](https://arxiv.org/abs/1706.03762), introduced in the 2017 paper ["Attention Is All You Need."](https://arxiv.org/abs/1706.03762) Before transformers, sequence models like RNNs and LSTMs processed text one token at a time, which made them slow to train and prone to forgetting information from earlier in a sequence. Transformers solved this with a mechanism called self-attention, which allows the model to look at every token in the input simultaneously and learn which tokens are relevant to each other.
+Modern LLMs are built on the [transformer architecture](https://arxiv.org/abs/1706.03762), introduced in the 2017 paper ["Attention Is All You Need."](https://arxiv.org/abs/1706.03762) Before transformers, earlier neural network designs (RNNs and LSTMs) processed text one token (a word or word-piece -- see [Tokenization](#tokenization) below) at a time, which made them slow to train and prone to forgetting information from earlier in a sequence. Transformers solved this with a mechanism called self-attention, which allows the model to look at every token in the input simultaneously and learn which tokens are relevant to each other.
 
 At a high level, self-attention works like this: for each token in a sequence, the model computes three vectors -- a query, a key, and a value. The query represents "what am I looking for?", the key represents "what do I contain?", and the value represents "what information do I provide?" The model computes attention scores by comparing each query against all keys, then uses those scores to create a weighted combination of values. This lets the word "it" in a sentence attend strongly to the noun it refers to, even if that noun appeared many sentences earlier.
 

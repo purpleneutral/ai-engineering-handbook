@@ -6,7 +6,7 @@ Last reviewed: 2026-02-10
 
 ## Summary
 
-Structured outputs and tool calling are the reliability primitives of LLM-powered systems: they let you turn "chatty text" into validated data and controlled actions. Without them, every interaction with a language model requires fragile text parsing and leaves you vulnerable to format drift, hallucinated data, and uncontrolled side effects. With them, you get machine-parseable results that can be validated against schemas, and a clean separation between the model's reasoning and the actions your system takes. This chapter covers when to use each technique, how they work under the hood, how to design schemas and tools for production, and the validation-retry pattern that makes the whole approach robust.
+Structured outputs and tool calling are the two core techniques that make LLM-powered systems reliable: they let you turn "chatty text" into validated data and controlled actions. Without them, every interaction with a language model requires fragile text parsing and leaves you vulnerable to format drift, hallucinated data, and uncontrolled side effects. With them, you get machine-parseable results that can be validated against schemas, and a clean separation between the model's reasoning and the actions your system takes. This chapter covers when to use each technique, how they work under the hood, how to design schemas and tools for production, and the validation-retry pattern that makes the whole approach robust.
 
 ## See Also
 - [Prompting](02-prompting.md)
@@ -180,7 +180,7 @@ Keep outputs small and focused. A model asked to fill 5 fields is more reliable 
 
 Use enums and allowlists wherever the set of valid values is known. A field defined as `"type": "string"` gives the model freedom to produce any string, including hallucinated or malformed values. A field defined as `"enum": ["low", "medium", "high"]` constrains the output to exactly the values your downstream code can handle.
 
-Avoid "stringly typed" fields. If a field represents a boolean decision, use `"type": "boolean"`, not a string that might be "yes", "Yes", "YES", "true", "True", or "1". If a field represents a number, use `"type": "integer"` or `"type": "number"`, not a string that your code must then parse.
+Avoid using text fields where a more specific type would work. If a field represents a boolean decision, use `"type": "boolean"`, not a string that might be "yes", "Yes", "YES", "true", "True", or "1". If a field represents a number, use `"type": "integer"` or `"type": "number"`, not a string that your code must then parse.
 
 Set `additionalProperties: false` on your schemas. This prevents the model from adding fields you did not ask for, which keeps your output predictable and your parsing code simple.
 

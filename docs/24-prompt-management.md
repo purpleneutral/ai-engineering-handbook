@@ -6,7 +6,7 @@ Last reviewed: 2026-02-10
 
 ## Summary
 
-Prompts are the primary control surface for LLM system behavior, yet most teams treat them as casual strings buried in application code. Prompt management is the discipline of treating prompts as first-class managed artifacts with their own lifecycle: version control, registry, testing, deployment, monitoring, and iteration. Organizations that adopt prompt management practices ship more reliably, iterate faster, and avoid the class of failures that comes from untracked prompt changes colliding with model updates.
+Prompts are the primary control surface for LLM system behavior --- the instructions that tell the model what to do --- yet most teams treat them as casual strings buried in application code. Prompt management is the discipline of treating prompts as first-class managed artifacts with their own lifecycle: version control, registry, testing, deployment, monitoring, and iteration. This chapter is relevant to anyone who oversees or contributes to AI-powered products, not just the developers who write the prompts. Organizations that adopt prompt management practices ship more reliably, iterate faster, and avoid the class of failures that comes from untracked prompt changes colliding with model updates.
 
 ## See Also
 - [Prompting](02-prompting.md)

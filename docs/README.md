@@ -6,7 +6,9 @@ Last reviewed: 2026-02-10
 
 ## How to Use This Book
 
-These chapters are designed to be read front-to-back as a cohesive guide, but each one also stands alone as a reference. If you are learning the field, follow the Core Reading Path in order and use the Prev/Next links at the bottom of each page. If you are looking something up, jump directly to the relevant chapter and follow the See Also links to explore related topics.
+These chapters are designed to be read front-to-back as a cohesive guide, but each one also stands alone as a reference. Early chapters cover foundational concepts that anyone can follow; later chapters get more technical for readers who are building systems. You do not need a technical background to start — begin with the Orientation chapters and go as deep as your interest takes you.
+
+If you are learning the field, follow the Core Reading Path in order and use the Prev/Next links at the bottom of each page. If you are looking something up, jump directly to the relevant chapter and follow the See Also links to explore related topics.
 
 ## Core Reading Path
 
@@ -15,7 +17,7 @@ These chapters are designed to be read front-to-back as a cohesive guide, but ea
 Before diving into technical content, these chapters establish what this reference covers, what is genuinely difficult in practice, and how to set up your development environment.
 
 1. [Scope and Update Policy](00-scope-and-update-policy.md) — What this book covers, what it deliberately omits, and the editorial conventions for keeping content current.
-2. [Stacks and Difficulty](16-stacks-and-difficulty.md) — A honest map of common AI feature types, their typical technology stacks, and where the real difficulty hides (spoiler: it is rarely the model).
+2. [Stacks and Difficulty](16-stacks-and-difficulty.md) — An honest map of common AI feature types, their typical technology stacks, and where the real difficulty hides (spoiler: it is rarely the model).
 3. [Installation and Local Setup](15-installation-and-local-setup.md) — A pragmatic checklist for setting up SDKs, local model runners, vector stores, and observability tools.
 
 ### Part I: Foundations
@@ -52,7 +54,7 @@ Building a working prototype is the easy part. These chapters cover what it take
 Deeper dives into specific capabilities and domains that are increasingly important for production AI systems.
 
 18. [Multimodal AI](20-multimodal.md) — Working with images, audio, video, and documents: provider capabilities, token economics, multimodal RAG, document processing, and visual prompt injection defenses.
-19. [Cost Engineering And Optimization](21-cost-engineering.md) — Token pricing models, prompt caching strategies, batching, model tiering and routing, self-host vs. API economics, and cost monitoring.
+19. [Cost Engineering And Optimization](21-cost-engineering.md) — Managing the cost of running LLM-powered systems: token pricing, prompt caching strategies, batching, model tiering and routing, self-host vs. API economics, and cost monitoring.
 20. [Guardrails And Content Moderation](22-guardrails-and-moderation.md) — Moderation APIs, guardrail frameworks (NeMo, Guardrails AI, LLM Guard), PII detection pipelines, input and output validation, and policy enforcement architecture.
 21. [Prompt Management](24-prompt-management.md) — Treating prompts as managed artifacts: version control, registries, templating systems, A/B testing, environment-specific configuration, and team collaboration patterns.
 22. [Data Pipelines For AI](25-data-pipelines.md) — The upstream work of turning messy documents into clean data: parsing, OCR, metadata extraction, deduplication, quality measurement, and pipeline orchestration.
@@ -68,6 +70,7 @@ Deeper dives into specific capabilities and domains that are increasingly import
 - [Reading List (Curated)](10-reading-list.md) — Annotated list of foundational papers, primary documentation, and high-signal information sources.
 - [A Brief History of AI and LLMs](19-history-of-ai.md) — From the 1943 McCulloch-Pitts neuron to today's reasoning models: the key milestones, breakthroughs, and winters that shaped the current landscape.
 - [Audit Methodology](23-audit-methodology.md) — How factual claims, links, and code examples are verified: scope, severity classification, and limitations.
+- [Editorial And Readability Review](31-editorial-and-readability.md) — How chapters are reviewed for clarity, audience inclusivity, and plain-language accessibility, plus navigation guidance by experience level.
 
 ## Adding New Pages
 

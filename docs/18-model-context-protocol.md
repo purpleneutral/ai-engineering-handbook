@@ -6,7 +6,7 @@ Last reviewed: 2026-02-10
 
 ## Summary
 
-The [Model Context Protocol (MCP)](https://modelcontextprotocol.io/specification/2025-11-25) is an open standard for connecting LLM-powered applications to external tools, data sources, and services through a single, consistent interface. Before MCP, every integration between an AI application and an external system required a bespoke connector, creating an N-times-M problem: N applications times M integrations, each built and maintained separately. MCP collapses this to N-plus-M by defining a universal protocol that any client can use to talk to any server. If you are building agent systems that need to interact with databases, APIs, file systems, or third-party services, MCP is the emerging standard for how that wiring works.
+The [Model Context Protocol (MCP)](https://modelcontextprotocol.io/specification/2025-11-25) is an open standard for connecting LLM-powered applications to external tools, data sources, and services through a single, consistent interface. Before MCP, every integration between an AI application and an external system required a bespoke connector (custom-built glue code), creating an N-times-M problem: N applications times M integrations, each built and maintained separately. MCP collapses this to N-plus-M by defining a universal protocol that any client can use to talk to any server. For teams building agent systems that need to interact with databases, APIs, file systems, or third-party services, MCP is the emerging standard for how that wiring works.
 
 ## See Also
 - [Structured Outputs And Tool Calling](11-structured-outputs-and-tool-calling.md) — how LLMs invoke tools in general; MCP standardizes the discovery and transport layer for those tools.

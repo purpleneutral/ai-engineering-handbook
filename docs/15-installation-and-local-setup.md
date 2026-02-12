@@ -60,7 +60,7 @@ For most teams, hosted APIs are the fastest path to production. You avoid GPU in
 
 ### Common Setup Pitfalls
 
-These mistakes are simple to avoid but surprisingly common, especially on teams where AI work is new and developers are moving fast to get a prototype running.
+These mistakes are simple to avoid but surprisingly common, especially on teams where AI work is new and people are moving fast to get a prototype running.
 
 - **Never commit API keys.** Use environment variables (`OPENAI_API_KEY`, etc.) during development and a proper secrets manager (Vault, AWS Secrets Manager, or your platform's equivalent) in production. A leaked API key can generate a large bill remarkably quickly, and revoking one often means redeploying every service that uses it.
 - **Log and store prompts/outputs carefully.** Prompts and completions frequently contain user data, and some of that data may be sensitive. Establish a redaction policy early -- decide what gets logged, what gets stored, and what gets scrubbed -- rather than retrofitting one after an incident.

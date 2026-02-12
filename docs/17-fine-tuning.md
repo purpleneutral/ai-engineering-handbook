@@ -39,7 +39,7 @@ At a practitioner level, fine-tuning is supervised learning on your data, starti
 
 You prepare a dataset of (input, desired output) pairs that demonstrate the behavior you want. For chat models, these are formatted as conversation-style message arrays -- a sequence of system, user, and assistant messages where the assistant messages represent the ideal responses.
 
-The training process takes the pre-trained model and performs additional gradient updates on your dataset. Each example slightly adjusts the model's weights to make it more likely to produce outputs like your examples when given similar inputs. The result is a new model checkpoint -- a copy of the base model with modified weights -- that behaves differently from the base model in the ways your training data demonstrates.
+The training process takes the pre-trained model and continues training on your dataset. Each example slightly adjusts the model's internal parameters (called weights) to make it more likely to produce outputs like your examples when given similar inputs. The result is a new model checkpoint -- a copy of the base model with modified weights -- that behaves differently from the base model in the ways your training data demonstrates.
 
 Critically, fine-tuning does **not** add new factual knowledge reliably. The model's weights encode statistical patterns, not a searchable database. Training on documents containing the fact "our headquarters is in Portland" might make the model more likely to mention Portland in some contexts, but it will not create a reliable lookup. The model may still hallucinate a different city if the prompt context pushes it in another direction. For factual grounding, retrieval is the reliable path.
 

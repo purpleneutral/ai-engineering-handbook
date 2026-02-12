@@ -6,7 +6,7 @@ Last reviewed: 2026-02-10
 
 ## Summary
 
-LLM API calls are expensive relative to traditional compute, and costs scale with usage in ways that are easy to underestimate. A single poorly designed prompt loop can generate a four-figure bill overnight. Cost engineering is not about being cheap --- it is about spending deliberately, measuring what you spend, and ensuring that every token serves a purpose. The techniques in this chapter (model tiering, prompt caching, batching, structured outputs, and cost monitoring) routinely achieve 60--90% cost reductions compared to naive implementations.
+Running LLM-powered systems costs money. LLM API calls are expensive relative to traditional compute, and costs scale with usage in ways that are easy to underestimate. A single poorly designed prompt loop can generate a four-figure cloud bill overnight. Cost engineering is not about being cheap --- it is about spending deliberately, measuring what you spend, and ensuring that every token (the unit of text that models process and providers charge for) serves a purpose. This chapter is useful for anyone involved in budgeting, planning, or building AI features. The techniques covered here (model tiering, prompt caching, batching, structured outputs, and cost monitoring) routinely achieve 60--90% cost reductions compared to naive implementations.
 
 ## See Also
 - [LLM Fundamentals](01-llm-fundamentals.md) --- Token economics and context window mechanics.

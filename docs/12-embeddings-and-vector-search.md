@@ -6,7 +6,7 @@ Last reviewed: 2026-02-10
 
 ## Summary
 
-Embeddings map text (and sometimes images, audio, and code) into dense numerical vectors so that semantic similarity can be computed as geometric distance. Vector search -- finding the nearest neighbors to a query vector in a large collection -- is the backbone of most [retrieval-augmented generation (RAG)](03-rag.md) systems, and is also used for clustering, deduplication, classification, and routing. This chapter explains how embeddings work conceptually, the distance metrics used to compare them, the algorithms that make nearest-neighbor search fast at scale, and the practical design decisions that determine whether your retrieval system works well or fails quietly.
+Embeddings map text (and sometimes images, audio, and code) into lists of numbers called vectors, arranged so that similar meanings end up close together and dissimilar meanings end up far apart. Vector search -- finding the nearest neighbors to a query vector in a large collection -- is the backbone of most [retrieval-augmented generation (RAG)](03-rag.md) systems, and is also used for clustering, deduplication, classification, and routing. This chapter explains how embeddings work conceptually, the distance metrics used to compare them, the algorithms that make nearest-neighbor search fast at scale, and the practical design decisions that determine whether your retrieval system works well or fails quietly.
 
 ## See Also
 - [Retrieval-Augmented Generation (RAG)](03-rag.md)
@@ -27,7 +27,7 @@ Vector search is not the right tool for exact match queries (use a database inde
 
 ### What Embeddings Are
 
-An embedding model takes a piece of content -- a sentence, a paragraph, an image -- and produces a fixed-length vector of floating-point numbers, typically between 256 and 4096 dimensions. This vector is a learned representation that captures the semantic content of the input: pieces of text that mean similar things end up close together in the vector space, while unrelated pieces end up far apart.
+An embedding model takes a piece of content -- a sentence, a paragraph, an image -- and produces a fixed-length list of numbers (called a vector), typically between 256 and 4,096 numbers long. This vector is a learned representation that captures the meaning of the input: pieces of text that mean similar things end up with similar vectors, while unrelated pieces end up with very different ones.
 
 The underlying mechanism is a neural network (usually a transformer) that has been trained on large amounts of data to place semantically similar inputs near each other. Training typically uses a contrastive objective: the model sees pairs of related inputs (e.g., a question and its answer, a sentence and its paraphrase) and learns to produce vectors that are close together for related pairs and far apart for unrelated pairs. The [Sentence-BERT](https://arxiv.org/abs/1908.10084) family of models popularized this approach and remains a strong baseline.
 

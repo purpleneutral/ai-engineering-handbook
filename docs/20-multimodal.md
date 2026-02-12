@@ -6,7 +6,7 @@ Last reviewed: 2026-02-10
 
 ## Summary
 
-Multimodal AI refers to models that process and reason across multiple input types --- text, images, audio, video, and documents --- within a single request. As of early 2026, multimodal capabilities are a baseline feature of every major frontier model, not an experimental add-on. For practitioners, this means the same model that processes text can now process screenshots, scanned documents, audio recordings, and video clips, which fundamentally changes the design space for applications like document processing, accessibility, content moderation, and data extraction.
+Multimodal AI refers to models that process and reason across multiple input types --- text, images, audio, video, and documents --- within a single request. As of early 2026, multimodal capabilities are a baseline feature of every major frontier model, not an experimental add-on. In practice, this means the same model that processes text can now process screenshots, scanned documents, audio recordings, and video clips, which fundamentally changes the design space for applications like document processing, accessibility, content moderation, and data extraction.
 
 ## See Also
 - [LLM Fundamentals](01-llm-fundamentals.md) --- How models process inputs, including token economics.
@@ -21,7 +21,7 @@ Before multimodal models, processing an image meant running a separate computer 
 
 This is not just a convenience improvement. It changes what is possible. A multimodal model can read a chart image and answer questions about trends. It can look at a screenshot of a UI and identify layout issues. It can listen to a customer service call and summarize both the content and the caller's tone. These tasks were technically possible before, but they required stitching together multiple specialized models, each with its own failure modes. A single multimodal model handles the integration internally.
 
-The practical implication for engineers is straightforward: if your application involves images, documents, audio, or video, you should evaluate whether a multimodal model can handle the task directly before building a multi-model pipeline. The answer is increasingly yes, and the unified approach is usually simpler, cheaper, and more reliable.
+The practical implication is straightforward: if your application involves images, documents, audio, or video, evaluate whether a multimodal model can handle the task directly before building a multi-model pipeline. The answer is increasingly yes, and the unified approach is usually simpler, cheaper, and more reliable.
 
 ## Vision and Image Understanding
 

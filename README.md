@@ -6,21 +6,25 @@ Last reviewed: 2026-02-10
 
 ## About This Book
 
-This is a practitioner's guide to building reliable systems with large language models. It is written for software engineers, technical leads, and architects who need to ship AI-powered features that work in production — not just in demos.
+This is a free, open-source guide to understanding and building with large language models. There is no paywall, no premium tier, and no required purchase — the entire handbook is available here.
 
-The field moves fast. Rather than chasing daily announcements, this reference focuses on **durable concepts**: the architectural patterns, failure modes, and operational practices that remain useful even as specific models and providers change. Where details are volatile (pricing, context limits, API surfaces), they are date-stamped so you know when to re-verify.
+Whether you are completely new to AI and want to understand what LLMs actually are, or you are an experienced engineer designing production systems, this handbook is for you. Early chapters explain core concepts from the ground up. Later chapters go deeper into architecture, operations, and specialized topics. You do not need to read everything — start where you are and go as deep as you need.
+
+The field moves fast. Rather than chasing daily announcements, this reference focuses on **durable concepts**: the patterns, trade-offs, and practical knowledge that remain useful even as specific models and providers change. Where details are volatile (pricing, context limits, API surfaces), they are date-stamped so you know when to re-verify.
 
 ### Who This Is For
 
-- **Engineers** adding LLM features to existing products (chat, search, extraction, automation).
-- **Tech leads** making architectural decisions about model selection, tool design, and safety boundaries.
+- **Anyone curious about AI** who wants to understand how large language models work, what they can and cannot do, and how they are used in practice.
+- **Product managers and decision-makers** evaluating where AI fits into their products or organization.
+- **Engineers and architects** building, shipping, and operating LLM-powered features in production.
 - **Teams** that need a shared vocabulary and a set of checklists for reviewing AI work.
 
 ### What You Will Find
 
-- **Concepts explained**, not just listed. Each chapter teaches the "why" before the "how."
+- **Concepts explained from the ground up.** Each chapter teaches the "why" before the "how," starting with the basics and building to advanced topics.
 - **Decision criteria** instead of "best model" rankings. Your constraints determine the right choice.
-- **Checklists** for production readiness, safety, and operational hygiene.
+- **Practical guidance** for both understanding AI and building with it — from "what is a token" to production architecture.
+- **Checklists** for production readiness, safety, and day-to-day operations.
 - **A curated tool index** with install commands and difficulty ratings.
 - **Primary-source references** (papers, vendor docs, specs) so you can go deeper.
 
@@ -34,6 +38,7 @@ The field moves fast. Rather than chasing daily announcements, this reference fo
 
 | Goal | Start Here |
 |------|------------|
+| New to AI — start from scratch | [LLM Fundamentals](docs/01-llm-fundamentals.md) — how large language models actually work |
 | Learn end-to-end | [Book table of contents](docs/README.md) — read front-to-back |
 | Look something up | Jump to a chapter via the [table of contents](docs/README.md) |
 | Set up your environment | [Installation and Local Setup](docs/15-installation-and-local-setup.md) |

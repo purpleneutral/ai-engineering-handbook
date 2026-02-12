@@ -13,7 +13,7 @@ These notes aim to be a durable reference for building reliable AI features, not
 
 ## What This Repo Covers
 
-The AI/LLM space generates an extraordinary amount of noise -- new models every week, benchmarks that shift overnight, and tooling that appears (and sometimes disappears) just as quickly. These notes deliberately step back from that churn. The goal is to capture the reasoning, patterns, and architectural decisions that remain useful even after the specific numbers change. If you understand *why* a retrieval pipeline needs chunking boundaries, you can adapt when the embedding model or vector store changes underneath you.
+The AI/LLM space generates an extraordinary amount of noise -- new models every week, benchmarks that shift overnight, and tooling that appears (and sometimes disappears) just as quickly. These notes deliberately step back from that churn. The goal is to capture the reasoning, patterns, and architectural decisions that remain useful even after the specific numbers change. If you understand *why* a design decision was made, you can adapt when the specific tools or services change underneath you.
 
 With that philosophy in mind, the topics covered here include:
 

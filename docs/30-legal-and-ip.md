@@ -4,11 +4,11 @@ Last reviewed: 2026-02-10
 
 [Contents](README.md) | [Prev](29-migration-and-vendor-strategy.md) | [Next](09-glossary.md)
 
-> **This chapter is educational content for engineers, not legal advice.** The legal landscape around AI is evolving rapidly, with active litigation, pending legislation, and regulatory guidance that may change materially between the time this is written and the time you read it. Nothing here should be treated as a substitute for qualified legal counsel familiar with your jurisdiction, your industry, and the specific facts of your situation. Consult a lawyer before making decisions that carry legal risk.
+> **This chapter is educational content, not legal advice.** The legal landscape around AI is evolving rapidly, with active litigation, pending legislation, and regulatory guidance that may change materially between the time this is written and the time you read it. Nothing here should be treated as a substitute for qualified legal counsel familiar with your jurisdiction, your industry, and the specific facts of your situation. Consult a lawyer before making decisions that carry legal risk.
 
 ## Summary
 
-Engineers building AI features operate in a legal environment that is unsettled, jurisdictionally fragmented, and changing fast. This chapter maps the key areas -- copyright, licensing, data residency, liability, and regulation -- so that you can spot issues early, ask the right questions, and build systems that are easier to defend legally. It is not a compliance manual; it is a field guide for practitioners who need to understand the terrain.
+Teams building and deploying AI features operate in a legal environment that is unsettled, jurisdictionally fragmented, and changing fast. This chapter maps the key areas -- copyright, licensing, data residency, liability, and regulation -- so that you can spot issues early, ask the right questions, and build systems that are easier to defend legally. It is not a compliance manual; it is a field guide for anyone involved in AI products --- engineers, product managers, and business leaders alike --- who needs to understand the terrain.
 
 ## See Also
 - [Governance And Risk](14-governance-and-risk.md)
@@ -34,7 +34,7 @@ In February 2023, the Copyright Office addressed a more nuanced case: Kris Kasht
 
 In August 2023, the Copyright Office issued a [Federal Register notice](https://www.federalregister.gov/documents/2023/08/30/2023-18624/copyright-registration-guidance-works-containing-material-generated-by-artificial-intelligence) formalizing its guidance: applicants must disclose AI-generated content in registration applications, and copyright protection extends only to the human-authored elements of a work.
 
-### What This Means For Engineers
+### What This Means In Practice
 
 As of 2026-02-10, the practical implications are:
 
@@ -70,7 +70,7 @@ In the absence of clear legal resolution, a practical ecosystem of opt-out mecha
 
 As of 2026-02-10, these mechanisms are voluntary and not legally binding. Their effectiveness depends entirely on whether AI companies choose to honor them. OpenAI has stated that it respects `robots.txt` directives for GPTBot. Not all providers make the same commitment.
 
-For engineers, the takeaway is practical: if you are building systems that crawl or ingest content, respect opt-out signals. If you are fine-tuning models on collected data, document the provenance and licensing of your training data. The legal standards are unclear, but demonstrating good faith and respect for content creators' preferences is both ethically sound and strategically prudent.
+The practical takeaway: if you are building systems that crawl or ingest content, respect opt-out signals. If you are fine-tuning models on collected data, document the provenance and licensing of your training data. The legal standards are unclear, but demonstrating good faith and respect for content creators' preferences is both ethically sound and strategically prudent.
 
 ## Terms Of Service For LLM APIs
 
@@ -136,7 +136,7 @@ When you send data to a cloud-hosted LLM API, that data crosses network boundari
 
 The [General Data Protection Regulation (GDPR)](https://gdpr.eu/) imposes specific requirements on the transfer of personal data outside the European Economic Area (EEA). As of 2026-02-10, sending personal data to a US-based API provider requires a valid transfer mechanism, such as [Standard Contractual Clauses (SCCs)](https://commission.europa.eu/law/law-topic/data-protection/international-dimension-data-protection/standard-contractual-clauses-scc_en) or the [EU-U.S. Data Privacy Framework](https://www.dataprivacyframework.gov/), which was adopted by the European Commission in July 2023. The Data Privacy Framework provides a lawful transfer mechanism for organizations that have self-certified, but its durability is uncertain given the history of prior frameworks ([Safe Harbor](https://en.wikipedia.org/wiki/International_Safe_Harbor_Privacy_Principles) was invalidated in *Schrems I*, [Privacy Shield](https://en.wikipedia.org/wiki/EU%E2%80%93US_Privacy_Shield) was invalidated in *Schrems II*).
 
-Practical steps for engineers:
+Practical steps:
 
 **Minimize personal data in prompts.** The most robust compliance strategy is to avoid sending personal data to external APIs in the first place. Strip, anonymize, or pseudonymize personal data before it enters the LLM pipeline. See the [Safety, Privacy, And Security](06-safety-privacy-security.md) chapter for data classification and minimization techniques.
 
@@ -178,7 +178,7 @@ As of 2026-02-10, there is no comprehensive liability framework specifically for
 
 **Section 230 of the Communications Decency Act** ([47 U.S.C. Section 230](https://www.law.cornell.edu/uscode/text/47/230)) provides immunity to platforms for user-generated content, but as of 2026-02-10 it is unclear whether this immunity extends to AI-generated content. If a chatbot generates defamatory content, is the operator a "publisher" of that content or an "interactive computer service" immune from liability for third-party content? This question has not been definitively resolved.
 
-### For Engineers
+### Practical Implications
 
 You cannot control the legal outcomes, but you can build systems that are more defensible. Document your design decisions and the safety measures you implemented. Run evaluations and keep the results. Implement monitoring and incident response. Add appropriate disclaimers to AI-generated output, especially in high-risk domains. These practices do not guarantee immunity, but they demonstrate reasonable care, which matters in a negligence analysis.
 
@@ -202,7 +202,7 @@ The AI Act classifies AI systems into risk tiers, with obligations proportional 
 
 The AI Act includes specific provisions for general-purpose AI models (which includes large language models). As of 2026-02-10, providers of GPAI models must comply with transparency obligations including providing technical documentation, making information available to downstream deployers, publishing a sufficiently detailed summary of training data content, and complying with EU copyright law. GPAI models with "systemic risk" (defined by compute thresholds and other criteria) face additional obligations including model evaluation, adversarial testing, incident tracking, and cybersecurity measures. These GPAI obligations apply from August 2, 2025.
 
-### What It Means For Engineers
+### What It Means For AI Teams
 
 If you are building AI features that serve EU users or are deployed within the EU, the AI Act likely applies to your system. The key engineering implications:
 
@@ -222,7 +222,7 @@ As of 2026-02-10, the [U.S. Patent and Trademark Office (USPTO)](https://www.usp
 
 The UK Supreme Court reached the same conclusion in [*Thaler v. Comptroller-General of Patents*](https://www.supremecourt.uk/cases/uksc-2021-0201.html), ruling in December 2023 that an AI system cannot be an inventor under UK patent law.
 
-For engineers, this means: if you use AI to assist in developing a patentable invention, ensure that human inventors made significant intellectual contributions to the conception of the invention. Document the human contributions. An invention where the human's only contribution was typing a prompt and the AI produced the complete inventive concept may not be patentable.
+In practice, this means: if you use AI to assist in developing a patentable invention, ensure that human inventors made significant intellectual contributions to the conception of the invention. Document the human contributions. An invention where the human's only contribution was typing a prompt and the AI produced the complete inventive concept may not be patentable.
 
 ## Practical Compliance Patterns
 

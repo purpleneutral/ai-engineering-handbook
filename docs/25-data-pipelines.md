@@ -6,7 +6,7 @@ Last reviewed: 2026-02-10
 
 ## Summary
 
-Data pipelines are the upstream machinery that converts messy real-world documents into clean, structured, searchable content that AI systems can use. This is the unglamorous foundation that determines the ceiling of every downstream task: if your ingestion pipeline drops tables from PDFs, corrupts encodings, or silently skips documents, no amount of prompt engineering or model sophistication will compensate. This chapter covers the end-to-end pipeline from raw document acquisition through parsing, cleaning, chunking, and quality measurement, with practical guidance on libraries, orchestration, and operating these systems at scale.
+Data pipelines are the upstream machinery that converts messy real-world documents into clean, structured, searchable content that AI systems can use. If your AI application answers questions from a knowledge base, processes uploaded documents, or searches internal files, a data pipeline is what prepares that content for the AI to work with. This is the unglamorous foundation that determines the ceiling of every downstream task: if your ingestion pipeline drops tables from PDFs, corrupts encodings, or silently skips documents, no amount of prompt engineering or model sophistication will compensate. This chapter is deeply technical --- it covers the end-to-end pipeline from raw document acquisition through parsing, cleaning, chunking, and quality measurement, with practical guidance on libraries, orchestration, and operating these systems at scale.
 
 ## See Also
 - [Retrieval-Augmented Generation (RAG)](03-rag.md)

@@ -6,7 +6,7 @@ Last reviewed: 2026-02-10
 
 ## Summary
 
-UX for AI features is an engineering discipline, not a visual design exercise. The hard problems are streaming responses without jarring the user, communicating uncertainty honestly, failing gracefully when the model times out or hallucinates, and choosing the right interaction pattern for the task. Get these wrong and it does not matter how good your model is --- users will not trust it, will not use it, or will use it in ways that produce bad outcomes. This chapter covers the engineering side: what to build, how to build it, and what to avoid.
+UX for AI features sits at the intersection of design, product, and engineering. The hard problems are streaming responses without jarring the user, communicating uncertainty honestly, failing gracefully when the model times out or hallucinates, and choosing the right interaction pattern for the task. Get these wrong and it does not matter how good your model is --- users will not trust it, will not use it, or will use it in ways that produce bad outcomes. This chapter covers the practical side: what to build, how to build it, and what to avoid. Product managers, designers, and engineers all benefit from understanding these patterns --- they shape the user experience as much as any visual design decision.
 
 ## See Also
 - [Architecture Recipes](07-architecture-recipes.md) --- interaction patterns map directly to architecture choices.
