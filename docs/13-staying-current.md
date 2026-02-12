@@ -2,7 +2,7 @@
 
 Last reviewed: 2026-02-10
 
-[Contents](README.md) | [Prev](14-governance-and-risk.md) | [Next](09-glossary.md)
+[Contents](README.md) | [Prev](14-governance-and-risk.md) | [Next](20-multimodal.md)
 
 ## Summary
 Most "current AI" content is either marketing or too shallow to operationalize. Use a small set of high-signal sources, and treat vendor docs as the source of truth for capabilities and limits. The AI field moves fast enough that staying informed is a real challenge, but the bigger risk is not falling behind; it is wasting time and attention on noise. A disciplined intake process helps you absorb genuinely important developments while ignoring the vast majority of announcements that will not affect your work.
@@ -129,4 +129,4 @@ Conversations with peers who are building similar systems provide practical insi
 - [Papers with Code (benchmarks + papers)](https://paperswithcode.com/about)
 
 ---
-[Contents](README.md) | [Prev](14-governance-and-risk.md) | [Next](09-glossary.md)
+[Contents](README.md) | [Prev](14-governance-and-risk.md) | [Next](20-multimodal.md)

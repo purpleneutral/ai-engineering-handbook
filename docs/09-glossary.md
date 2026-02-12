@@ -2,7 +2,7 @@
 
 Last reviewed: 2026-02-10
 
-[Contents](README.md) | [Prev](13-staying-current.md) | [Next](10-reading-list.md)
+[Contents](README.md) | [Prev](20-multimodal.md) | [Next](10-reading-list.md)
 
 This glossary defines key terms used throughout this book. Terms are listed alphabetically. Where a term is covered in depth in a specific chapter, the chapter is linked.
 
@@ -100,7 +100,7 @@ This glossary defines key terms used throughout this book. Terms are listed alph
 
 **[Model-Graded Evaluation](https://arxiv.org/abs/2306.05685)** — Using an LLM to score or judge the outputs of another LLM. Scales better than human review but requires calibration against human judgments and periodic spot checks. See [Evals and Testing](05-evals.md).
 
-**Multimodal** — Describes models or systems that can process and generate multiple types of input and output beyond text, such as images, audio, video, and code. Modern frontier models (GPT-4, [Claude](https://docs.anthropic.com/), [Gemini](https://ai.google.dev/docs)) accept images alongside text; some also handle audio and video natively. Multimodal capabilities expand the range of tasks an LLM system can address but introduce additional considerations for tokenization, cost, and evaluation. See [LLM Fundamentals](01-llm-fundamentals.md).
+**Multimodal** — Describes models or systems that can process and generate multiple types of input and output beyond text, such as images, audio, video, and code. Modern frontier models (GPT-4, [Claude](https://docs.anthropic.com/), [Gemini](https://ai.google.dev/docs)) accept images alongside text; some also handle audio and video natively. Multimodal capabilities expand the range of tasks an LLM system can address but introduce additional considerations for tokenization, cost, and evaluation. See [Multimodal AI](20-multimodal.md).
 
 ## O
 
@@ -165,4 +165,4 @@ This glossary defines key terms used throughout this book. Terms are listed alph
 **Zero-Shot** — Prompting a model to perform a task without providing any examples, relying solely on instructions and the model's pre-trained knowledge. Contrast with few-shot prompting. See [Prompting](02-prompting.md).
 
 ---
-[Contents](README.md) | [Prev](13-staying-current.md) | [Next](10-reading-list.md)
+[Contents](README.md) | [Prev](20-multimodal.md) | [Next](10-reading-list.md)

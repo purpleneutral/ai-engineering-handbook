@@ -47,6 +47,12 @@ Building a working prototype is the easy part. These chapters cover what it take
 16. [Governance and Risk](14-governance-and-risk.md) — Organizational practices for shipping AI responsibly: system documentation, risk assessment, change control, and compliance.
 17. [Staying Current (Without Chasing Hype)](13-staying-current.md) — A practical framework for tracking what matters in a fast-moving field without drowning in noise.
 
+### Part IV: Specialized Topics
+
+Deeper dives into specific capabilities and domains that are increasingly important for production AI systems.
+
+18. [Multimodal AI](20-multimodal.md) — Working with images, audio, video, and documents: provider capabilities, token economics, multimodal RAG, document processing, and visual prompt injection defenses.
+
 ### Appendices
 
 - [Glossary](09-glossary.md) — Definitions for key terms used throughout this book.
