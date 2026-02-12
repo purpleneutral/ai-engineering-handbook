@@ -2,7 +2,7 @@
 
 Last reviewed: 2026-02-10
 
-[Contents](README.md) | [Prev](26-caching-and-latency.md) | [Next](09-glossary.md)
+[Contents](README.md) | [Prev](26-caching-and-latency.md) | [Next](28-multi-tenancy.md)
 
 ## Summary
 
@@ -316,4 +316,4 @@ When AI output is grounded in retrieved sources (RAG, web search, knowledge base
 *Last audited: 2026-02-10 · [Audit methodology](23-audit-methodology.md)*
 
 ---
-[Contents](README.md) | [Prev](26-caching-and-latency.md) | [Next](09-glossary.md)
+[Contents](README.md) | [Prev](26-caching-and-latency.md) | [Next](28-multi-tenancy.md)

@@ -58,6 +58,9 @@ Deeper dives into specific capabilities and domains that are increasingly import
 22. [Data Pipelines For AI](25-data-pipelines.md) — The upstream work of turning messy documents into clean data: parsing, OCR, metadata extraction, deduplication, quality measurement, and pipeline orchestration.
 23. [Caching And Latency Optimization](26-caching-and-latency.md) — Prompt caching, semantic caching, response caching, streaming, parallel tool calls, model tiering for latency, and measuring TTFT/P95/P99.
 24. [UX Design For AI Features](27-ux-design-for-ai.md) — The engineering side of AI interfaces: streaming display, uncertainty indicators, error states, chat vs. structured UI, feedback collection, and human-in-the-loop patterns.
+25. [Multi-Tenancy And Enterprise Patterns](28-multi-tenancy.md) — Per-tenant model configuration, data isolation in vector stores, rate limiting, billing, compliance, and scaling patterns for shared AI platforms.
+26. [Migration And Vendor Strategy](29-migration-and-vendor-strategy.md) — Abstraction layers, model comparison methodology, embedding migration, vendor lock-in vectors, multi-provider architectures, and exit planning.
+27. [Legal And Intellectual Property](30-legal-and-ip.md) — AI-generated content copyright, training data rights, API terms of service, open-weight licenses, data residency, the EU AI Act, and practical compliance patterns.
 
 ### Appendices
 
