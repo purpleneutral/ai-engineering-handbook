@@ -2,7 +2,7 @@
 
 Last reviewed: 2026-02-10
 
-[Contents](README.md) | [Prev](21-cost-engineering.md) | [Next](09-glossary.md)
+[Contents](README.md) | [Prev](21-cost-engineering.md) | [Next](24-prompt-management.md)
 
 ## Summary
 
@@ -343,4 +343,4 @@ The [NIST AI RMF 1.0](https://www.nist.gov/itl/ai-risk-management-framework) pro
 *Last audited: 2026-02-10 · [Audit methodology](23-audit-methodology.md)*
 
 ---
-[Contents](README.md) | [Prev](21-cost-engineering.md) | [Next](09-glossary.md)
+[Contents](README.md) | [Prev](21-cost-engineering.md) | [Next](24-prompt-management.md)

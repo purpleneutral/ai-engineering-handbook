@@ -54,6 +54,10 @@ Deeper dives into specific capabilities and domains that are increasingly import
 18. [Multimodal AI](20-multimodal.md) — Working with images, audio, video, and documents: provider capabilities, token economics, multimodal RAG, document processing, and visual prompt injection defenses.
 19. [Cost Engineering And Optimization](21-cost-engineering.md) — Token pricing models, prompt caching strategies, batching, model tiering and routing, self-host vs. API economics, and cost monitoring.
 20. [Guardrails And Content Moderation](22-guardrails-and-moderation.md) — Moderation APIs, guardrail frameworks (NeMo, Guardrails AI, LLM Guard), PII detection pipelines, input and output validation, and policy enforcement architecture.
+21. [Prompt Management](24-prompt-management.md) — Treating prompts as managed artifacts: version control, registries, templating systems, A/B testing, environment-specific configuration, and team collaboration patterns.
+22. [Data Pipelines For AI](25-data-pipelines.md) — The upstream work of turning messy documents into clean data: parsing, OCR, metadata extraction, deduplication, quality measurement, and pipeline orchestration.
+23. [Caching And Latency Optimization](26-caching-and-latency.md) — Prompt caching, semantic caching, response caching, streaming, parallel tool calls, model tiering for latency, and measuring TTFT/P95/P99.
+24. [UX Design For AI Features](27-ux-design-for-ai.md) — The engineering side of AI interfaces: streaming display, uncertainty indicators, error states, chat vs. structured UI, feedback collection, and human-in-the-loop patterns.
 
 ### Appendices
 

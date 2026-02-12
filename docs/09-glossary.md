@@ -2,7 +2,7 @@
 
 Last reviewed: 2026-02-10
 
-[Contents](README.md) | [Prev](22-guardrails-and-moderation.md) | [Next](10-reading-list.md)
+[Contents](README.md) | [Prev](27-ux-design-for-ai.md) | [Next](10-reading-list.md)
 
 This glossary defines key terms used throughout this book. Terms are listed alphabetically. Where a term is covered in depth in a specific chapter, the chapter is linked.
 
@@ -175,4 +175,4 @@ This glossary defines key terms used throughout this book. Terms are listed alph
 *Last audited: 2026-02-10 · [Audit methodology](23-audit-methodology.md)*
 
 ---
-[Contents](README.md) | [Prev](22-guardrails-and-moderation.md) | [Next](10-reading-list.md)
+[Contents](README.md) | [Prev](27-ux-design-for-ai.md) | [Next](10-reading-list.md)
