@@ -24,8 +24,6 @@ dist/
 build/
 out/
 
-# Internal planning
-TODO-chapters.md
 
 # Playwright
 .playwright-mcp/
