@@ -25,6 +25,9 @@ build/
 out/
 
 
+# Claude Code
+.claude/
+
 # Playwright
 .playwright-mcp/
 
