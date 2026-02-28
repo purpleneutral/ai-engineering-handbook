@@ -24,7 +24,6 @@ dist/
 build/
 out/
 
-
 # Claude Code
 .claude/
 
